@@ -1,0 +1,10 @@
+{
+    "ExperienceId": "CubeXP",
+    "ReadOnly": false,
+    "experience": [{
+        "sceneClassId": "Cube",
+        "enableOnExperienceStart": true,
+        "loadOnExperienceStart": true,
+        
+    }]
+}
