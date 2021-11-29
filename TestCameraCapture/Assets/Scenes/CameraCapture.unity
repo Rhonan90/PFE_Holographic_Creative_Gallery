@@ -347,6 +347,13 @@ MonoBehaviour:
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1296486106}
       serializationMode: HFUnityEditorSerializationMode
+    - name: label
+      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: NULL
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1296486106}
+      serializationMode: HFUnityEditorSerializationMode
     components:
     - component:
         name: animatorComponent
@@ -476,6 +483,13 @@ MonoBehaviour:
       serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       serializedValue: "{\r\n  \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::/Quad::}\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1296486106}
+      serializationMode: HFRuntimeSerializationMode
+    - name: label
+      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: NULL
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1296486106}
       serializationMode: HFRuntimeSerializationMode
