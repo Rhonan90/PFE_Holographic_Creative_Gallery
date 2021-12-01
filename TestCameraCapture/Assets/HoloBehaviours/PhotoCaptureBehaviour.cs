@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-public class CubeBehaviour : HoloBehaviour
+public class PhotoCaptureBehaviour : HoloBehaviour
 {
     [SharedAnimatorComponent]
     public SharedAnimatorComponent animatorComponent;
@@ -13,7 +13,7 @@ public class CubeBehaviour : HoloBehaviour
     public PhotoCaptureComponent photoCaptureComponent;
 
     public HoloGameObject target;
-    public HoloGameObject label;
+    //public HoloGameObject label;
 
     private bool isRed = false;
     bool inProgress = false;
@@ -22,7 +22,7 @@ public class CubeBehaviour : HoloBehaviour
     public override void Start()
     {
         gazeComponent.OnGazeEvent += OnGazeEvent;
-        UpdateLabel("Ready");
+        //UpdateLabel("Ready");
         SetColor(isRed);
     }
 
@@ -41,7 +41,7 @@ public class CubeBehaviour : HoloBehaviour
                 return;
             }
             SetColor(!isRed);
-            UpdateLabel("Taking picture");
+            //UpdateLabel("Taking picture");
             inProgress = true;
             photoCaptureComponent.TakePicture(OnPhotoTaken);
         }
@@ -68,10 +68,10 @@ public class CubeBehaviour : HoloBehaviour
 
         // IF server is NOT hoster locally
         string serverOfHostIp = "192.168.43.186";
-        string url = "http://" + serverOfHostIp + ":8000/" + filename;
+        string url = "http://" + serverOfHostIp + ":33900/" + filename;
 
 
-        UpdateLabel("Saving photo");
+        //UpdateLabel("Saving photo");
 
         Log("Saving photo to " + path);
         photoCaptureComponent.SavePhotoIDToFile(_id, path, (saveSuccess, saveId) =>
@@ -79,31 +79,32 @@ public class CubeBehaviour : HoloBehaviour
             if (!saveSuccess)
             {
                 inProgress = false;
-                UpdateLabel("Failed to save photo");
+                //UpdateLabel("Failed to save photo");
                 return;
 
             }
             photoCaptureComponent.ReleasePhotoID(_id);
 
             Log("Uploading to " + url);
-            UpdateLabel("Uploading photo");
+            //UpdateLabel("Uploading photo");
             HTTPHelper.SendFile(url, new Dictionary<string, string>(), path, (_sendSuccess, _sendResult) =>
             {
                 if (_sendSuccess)
                 {
                     Log("Set texture from file " + url);
-                    UpdateLabel("Donwloading process photo");
+                    //UpdateLabel("Donwloading process photo");
                     target.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
                     {
-                        if (_width == 0)
-                        {
-                            Error("Could not set texture");
-                            UpdateLabel("Failed to download");
-                        }
-                        else
-                        {
-                            Log("Texture loaded " + _width + "x" + _height);
-                            UpdateLabel("Done!");
+                    if (_width == 0)
+                    {
+                        Error("Could not set texture");
+                        //UpdateLabel("Failed to download");
+                    }
+                    else
+                    {
+                        Log("Texture loaded " + _width + "x" + _height);
+                        target.transform.localScale = new HoloVector3( (float)_width / 500f, (float) _height / 500f,1f);
+                            //UpdateLabel("Done!");
 
                         }
                         inProgress = false;
@@ -112,7 +113,7 @@ public class CubeBehaviour : HoloBehaviour
                 else
                 {
                     Error("Could not send file " + url);
-                    UpdateLabel("Failed to upload");
+                    //UpdateLabel("Failed to upload");
                     inProgress = false;
                 }
 
@@ -124,14 +125,14 @@ public class CubeBehaviour : HoloBehaviour
     private void SetColor(bool _value)
     {
         isRed = _value;
-        animatorComponent.SetBoolParameter("TurnRed", isRed);
+        //animatorComponent.SetBoolParameter("TurnRed", isRed);
     }
 
 
     void UpdateLabel(string _message)
     {
         Log(_message);
-        label.GetHoloElement<HoloText>().text = _message;
+        //label.GetHoloElement<HoloText>().text = _message;
 
     }
 }

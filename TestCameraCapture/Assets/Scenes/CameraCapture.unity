@@ -222,7 +222,7 @@ Transform:
   m_GameObject: {fileID: 1054081187}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 1.88, z: 0}
-  m_LocalScale: {x: 3.1060576, y: 1.9149814, z: 1.6835}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1296486105}
   m_RootOrder: 1
@@ -258,7 +258,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 528165e29e9917145aeb242b1b3d7b45, type: 2}
+  - {fileID: 2100000, guid: 8c8619b7155f63647a4c4c258acf783a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -331,26 +331,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  behaviourFullName: CubeBehaviour
+  behaviourFullName: PhotoCaptureBehaviour
   manager: {fileID: 0}
   behaviourDefinitionRelativeFilePath: 
   sceneOverridesRelativeFilePath: 
   editorParametersJson: 
   runtimeParametersJson: 
   editorParameters:
-    behaviourName: CubeBehaviour
+    behaviourName: PhotoCaptureBehaviour
     entries:
     - name: target
       serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::1}\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1296486106}
-      serializationMode: HFUnityEditorSerializationMode
-    - name: label
-      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: NULL
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1296486106}
       serializationMode: HFUnityEditorSerializationMode
@@ -372,7 +365,7 @@ MonoBehaviour:
         serializationMode: HFUnityEditorSerializationMode
       - name: SynchronizeAnimationProgress
         serializedType: System.Boolean
-        serializedValue: False
+        serializedValue: True
         relativeToTransform: {fileID: 0}
         unityObjectReferencer: {fileID: 1296486106}
         serializationMode: HFUnityEditorSerializationMode
@@ -385,7 +378,7 @@ MonoBehaviour:
       - name: Animator
         serializedType: Holo.HoloAnimator, HFHoloBaseImplementation, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-        serializedValue: "{\r\n  \"unityAnimator\": \"{HFUnityEditorSerializationMode::Component::1::RELATIVE::0}\"\r\n}"
+        serializedValue: "{\r\n  \"unityAnimator\": \"NULL\"\r\n}"
         relativeToTransform: {fileID: 0}
         unityObjectReferencer: {fileID: 1296486106}
         serializationMode: HFUnityEditorSerializationMode
@@ -466,30 +459,23 @@ MonoBehaviour:
         serializationMode: HFUnityEditorSerializationMode
       - name: Height
         serializedType: System.Int32
-        serializedValue: 0
+        serializedValue: 720
         relativeToTransform: {fileID: 0}
         unityObjectReferencer: {fileID: 1296486106}
         serializationMode: HFUnityEditorSerializationMode
       - name: Width
         serializedType: System.Int32
-        serializedValue: 0
+        serializedValue: 1280
         relativeToTransform: {fileID: 0}
         unityObjectReferencer: {fileID: 1296486106}
         serializationMode: HFUnityEditorSerializationMode
   runtimeParameters:
-    behaviourName: CubeBehaviour
+    behaviourName: PhotoCaptureBehaviour
     entries:
     - name: target
       serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
       serializedValue: "{\r\n  \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::/Quad::}\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1296486106}
-      serializationMode: HFRuntimeSerializationMode
-    - name: label
-      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: NULL
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1296486106}
       serializationMode: HFRuntimeSerializationMode
@@ -511,7 +497,7 @@ MonoBehaviour:
         serializationMode: HFRuntimeSerializationMode
       - name: SynchronizeAnimationProgress
         serializedType: System.Boolean
-        serializedValue: False
+        serializedValue: True
         relativeToTransform: {fileID: 0}
         unityObjectReferencer: {fileID: 1296486106}
         serializationMode: HFRuntimeSerializationMode
@@ -524,8 +510,7 @@ MonoBehaviour:
       - name: Animator
         serializedType: Holo.HoloAnimator, HFHoloBaseImplementation, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-        serializedValue: "{\r\n  \"unityAnimator\": \"{HFRuntimeSerializationMode::Component::0::/CubePrefab::::UnityEngine.Animator,
-          UnityEngine.AnimationModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}\"\r\n}"
+        serializedValue: "{\r\n  \"unityAnimator\": \"NULL\"\r\n}"
         relativeToTransform: {fileID: 0}
         unityObjectReferencer: {fileID: 1296486106}
         serializationMode: HFRuntimeSerializationMode
@@ -606,13 +591,13 @@ MonoBehaviour:
         serializationMode: HFRuntimeSerializationMode
       - name: Height
         serializedType: System.Int32
-        serializedValue: 0
+        serializedValue: 720
         relativeToTransform: {fileID: 0}
         unityObjectReferencer: {fileID: 1296486106}
         serializationMode: HFRuntimeSerializationMode
       - name: Width
         serializedType: System.Int32
-        serializedValue: 0
+        serializedValue: 1280
         relativeToTransform: {fileID: 0}
         unityObjectReferencer: {fileID: 1296486106}
         serializationMode: HFRuntimeSerializationMode
@@ -621,6 +606,7 @@ MonoBehaviour:
   serializedGameObjects:
   - {fileID: 109511807204844353}
   - {fileID: 1054081187}
+  - {fileID: 1296486104}
   serializedComponents:
   - {fileID: 109511807204844358}
 --- !u!1 &1868810679

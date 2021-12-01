@@ -895,7 +895,7 @@ MonoBehaviour:
       - name: GameObject
         serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
           PublicKeyToken=null
-        serializedValue: NULL
+        serializedValue: "{\r\n  \"unityGameObject\": \"NULL\"\r\n}"
         relativeToTransform: {fileID: 0}
         unityObjectReferencer: {fileID: 476499047}
         serializationMode: HFUnityEditorSerializationMode
