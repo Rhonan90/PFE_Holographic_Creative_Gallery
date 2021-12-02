@@ -13,7 +13,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     public PhotoCaptureComponent photoCaptureComponent;
 
     public HoloGameObject picture;
-    private HoloGameObject camera;
+    //private HoloGameObject camera;
     public HoloGameObject label;
     public HoloGameObject UI;
     public HoloGameObject StyleChoice;
@@ -39,7 +39,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         gestureComp.RegisterPose(HandPose.HandOpenedSky);
         gestureComp.OnPoseStart += OnposeStarted;
 
-        camera = camera.FindInScene("Camera");
+        //camera = camera.FindInScene("Camera");
 
         //Interaction choix de style 
         tableau1GazeComponent = Engine.AddHoloComponent<GazeComponent>(nameof(tableau1GazeComponent));
@@ -99,8 +99,8 @@ public class PhotoCaptureBehaviour : HoloBehaviour
             return;
         }
         StyleChoice.SetActive(true);
-        StyleChoice.transform.position = camera.transform.position + camera.transform.forward * 5;
-        StyleChoice.transform.rotation = camera.transform.rotation;
+        StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
+        StyleChoice.transform.rotation = HoloCamera.mainCamera.transform.rotation;
         Log("On passe par là");
     }
 
@@ -112,7 +112,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         inProgress = true;
 
         UI.SetActive(true);
-        UI.transform.position = camera.transform.position + camera.transform.forward * 5;
+        UI.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
         photoCaptureComponent.TakePicture(OnPhotoTaken);
     }
 

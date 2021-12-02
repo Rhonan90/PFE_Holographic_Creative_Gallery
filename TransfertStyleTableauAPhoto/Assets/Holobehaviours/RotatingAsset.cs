@@ -8,11 +8,13 @@ public class RotatingAsset : HoloBehaviour
 
     float _startTime;
 
+    private HoloVector3 originalScale;
 
     public override void Awake()
     {
         _startTime = TimeHelper.currentTime;
         Async.OnUpdate += Async_OnUpdate;
+        originalScale = _Icon.localScale;
     }
 
     private void Async_OnUpdate()
@@ -26,11 +28,6 @@ public class RotatingAsset : HoloBehaviour
 
             _startTime = TimeHelper.currentTime;
         }
-        //HoloVector3 iconAngle = _Icon.localEulerAngles;
-        //iconAngle.z += _oneStepAngle;
-
-        //_Icon.localEulerAngles = iconAngle;
-
-        //_startTime = TimeHelper.currentTime;
+        _Icon.localScale = new HoloVector3(originalScale.x * (1 + MathHelper.Sin(TimeHelper.currentTime) * 0.1f), originalScale.y * (1 + MathHelper.Sin(TimeHelper.currentTime) * 0.1f), originalScale.z * (1 + MathHelper.Sin(TimeHelper.currentTime) * 0.1f));
     }
 }
