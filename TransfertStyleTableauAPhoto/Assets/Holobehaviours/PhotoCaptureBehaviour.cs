@@ -14,8 +14,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
     public HoloGameObject picture;
     //private HoloGameObject camera;
-    public HoloGameObject label;
-    public HoloGameObject UI;
+    public HoloGameObject LabelUI;
     public HoloGameObject StyleChoice;
 
 
@@ -27,35 +26,49 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     private GazeComponent tableau2GazeComponent;
     private GazeComponent tableau3GazeComponent;
 
+    private List<GazeComponent> gazeComponents;
 
-    private bool isRed = false;
+    private List<string> photos;
+    private int? chosenPhotoIndex = null;
+    
+    private int? styleIndex; //?? not sure yet if int is the best indicator, mb style name better ?
+
     bool inProgress = false;
-
 
     public override void Start()
     {
         //gazeComponent.OnGazeEvent += OnGazeEvent;
         UpdateLabel("Ready");
         gestureComp.RegisterPose(HandPose.HandOpenedSky);
+        gestureComp.RegisterPose(HandPose.IndexPinch);
+        gestureComp.RegisterPose(HandPose.HandOpenedGround);
         gestureComp.OnPoseStart += OnposeStarted;
 
+
+
         //camera = camera.FindInScene("Camera");
+
+        gazeComponents = new List<GazeComponent>();
+        photos = new List<string>();
 
         //Interaction choix de style 
         tableau1GazeComponent = Engine.AddHoloComponent<GazeComponent>(nameof(tableau1GazeComponent));
         tableau1GazeComponent.attribute.GameObject = tableau1;
         tableau1GazeComponent.attribute.UseSnap = true;
         tableau1GazeComponent.OnGazeEvent += ScanGazeComponent_OnGazeEvent;
+        gazeComponents.Add(tableau1GazeComponent);
 
         tableau2GazeComponent = Engine.AddHoloComponent<GazeComponent>(nameof(tableau2GazeComponent));
         tableau2GazeComponent.attribute.GameObject = tableau2;
         tableau2GazeComponent.attribute.UseSnap = true;
         tableau2GazeComponent.OnGazeEvent += ScanGazeComponent_OnGazeEvent;
+        gazeComponents.Add(tableau2GazeComponent);
 
         tableau3GazeComponent = Engine.AddHoloComponent<GazeComponent>(nameof(tableau3GazeComponent));
         tableau3GazeComponent.attribute.GameObject = tableau3;
         tableau3GazeComponent.attribute.UseSnap = true;
         tableau3GazeComponent.OnGazeEvent += ScanGazeComponent_OnGazeEvent;
+        gazeComponents.Add(tableau3GazeComponent);
     }
 
     public override void OnDestroy()
@@ -67,57 +80,78 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     {
         if (_event == GazeEvent.OnTap)
         {
-            if (_component == tableau1GazeComponent || _component == tableau2GazeComponent || _component == tableau3GazeComponent)
+            for (int i = 0; i < gazeComponents.Count; i++)
             {
-                LaunchPhotoCapture();
-                StyleChoice.SetActive(false);
+                if (_component == gazeComponents[i])
+                {
+                    styleIndex = i;
+                    StyleChoice.SetActive(false);
+                    inProgress = false;
+                }
             }
         }
     }
 
-    //public void OnGazeEvent(GazeComponent _component, GazeEvent _event)
-    //{
-    //    if (_event == GazeEvent.OnTap)
-    //    {
-    //        if (inProgress)
-    //        {
-    //            Log("Capture already in progress");
-    //            return;
-    //        }
-    //        SetColor(!isRed);
-    //        //UpdateLabel("Taking picture");
-    //        inProgress = true;
-    //        photoCaptureComponent.TakePicture(OnPhotoTaken);
-    //    }
-    //}
 
     private void OnposeStarted(HandPose handPose, Handness handness)
     {
-        if (inProgress)
+        if (handPose == HandPose.HandOpenedSky)
         {
-            Log("Capture already in progress");
-            return;
+            if (inProgress)
+            {
+                Log("Already in progress");
+                return;
+            }
+            StyleChoice.SetActive(true);
+            StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
+            StyleChoice.transform.rotation = HoloCamera.mainCamera.transform.rotation;
+            inProgress = true;
         }
-        StyleChoice.SetActive(true);
-        StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
-        StyleChoice.transform.rotation = HoloCamera.mainCamera.transform.rotation;
-        Log("On passe par là");
+
+        if (handPose == HandPose.HandOpenedGround)
+        {
+            if (inProgress)
+            {
+                Log("Already in progress");
+                return;
+            }
+            if (chosenPhotoIndex == null)
+            {
+                Log("No photo taken yet");
+                return;
+            }
+            if (styleIndex == null)
+            {
+                Log("No style chosen yet");
+                return;
+            }
+            sendPhotoToServer(chosenPhotoIndex.Value, styleIndex.Value);
+        }
+
+        if (handPose == HandPose.IndexPinch)
+        {
+            if (inProgress)
+            {
+                Log("Already in progress");
+                return;
+            }
+            LaunchPhotoCapture();
+        }
+
     }
 
     public void LaunchPhotoCapture()
     {
-        Log("On passe par ici");
-        StyleChoice.SetActive(false);
+        //StyleChoice.SetActive(false);
         UpdateLabel("Taking picture, don't move");
-        inProgress = true;
 
-        UI.SetActive(true);
-        UI.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
+        showLabelUi();
         photoCaptureComponent.TakePicture(OnPhotoTaken);
     }
 
     void OnPhotoTaken(bool _success, int _id)
     {
+        inProgress = true;
         if (!_success)
         {
             Error("Failed to take photo");
@@ -128,17 +162,9 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
         string filename = "Photo_" + _id + ".png";
         string path = PathHelper.Combine(PathHelper.GetPersistentDataPath(), filename);
-        //string path = PathHelper.Combine("U:/Users/holof/Pictures/", filename); //pb
-        Log("path to save = " + path);
-
-        // Run the simple server in Server/CameraCaptureServer.py  IF server is hosted locally
-        //string url = "http://"+NetworkHelper.GetHoloSceneServerIP()+":8000/" + filename;  
-        //string url = "http://" + NetworkHelper.GetHoloSceneServerIP() + ":33900/" + filename;
-
-        // IF server is NOT hoster locally
-        string serverOfHostIp = "192.168.43.186";
-        string url = "http://" + serverOfHostIp + ":33900/" + filename;
-
+        //Log("path to save = " + path);
+        photos.Add(path);
+        chosenPhotoIndex = photos.Count - 1;
 
         UpdateLabel("Saving photo");
 
@@ -153,17 +179,38 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
             }
             photoCaptureComponent.ReleasePhotoID(_id);
+            LabelUI.SetActive(false);
+        });
+        inProgress = false;
 
-            Log("Uploading to " + url);
-            UpdateLabel("Uploading photo");
-            HTTPHelper.SendFile(url, new Dictionary<string, string>(), path, (_sendSuccess, _sendResult) =>
+    }
+
+    void sendPhotoToServer(int photoIndex, int styleIndex)
+    {
+        showLabelUi();
+        inProgress = true;
+        int lastSlashIndex = photos[photoIndex].LastIndexOf("/");
+        string filename = photos[photoIndex].Substring(lastSlashIndex + 1);
+        Log(filename);
+
+        // Run the simple server in Server/CameraCaptureServer.py  IF server is hosted locally
+        //string url = "http://"+NetworkHelper.GetHoloSceneServerIP()+":8000/" + filename;  
+        //string url = "http://" + NetworkHelper.GetHoloSceneServerIP() + ":33900/" + filename;
+
+        // IF server is NOT hoster locally
+        string serverOfHostIp = "192.168.43.186";
+        string url = "http://" + serverOfHostIp + ":33900/" + filename;
+
+        Log("Uploading to " + url);
+        UpdateLabel("Uploading photo");
+        HTTPHelper.SendFile(url, new Dictionary<string, string>(), photos[photoIndex], (_sendSuccess, _sendResult) =>
+        {
+            if (_sendSuccess)
             {
-                if (_sendSuccess)
+                Log("Set texture from file " + url);
+                UpdateLabel("Donwloading process photo");
+                picture.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
                 {
-                    Log("Set texture from file " + url);
-                    UpdateLabel("Donwloading process photo");
-                    picture.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
-                    {
                     if (_width == 0)
                     {
                         Error("Could not set texture");
@@ -173,31 +220,35 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                     {
                         Log("Texture loaded " + _width + "x" + _height);
                         picture.SetActive(true);
-                        picture.transform.position = UI.transform.position;
-                        picture.transform.localScale = new HoloVector3( (float)_width / 500f, (float) _height / 500f,1f);
+                        picture.transform.position = LabelUI.transform.position;
+                        picture.transform.localScale = new HoloVector3((float)_width / 500f, (float)_height / 500f, 1f);
                         UpdateLabel("Done!");
-                        UI.SetActive(false);
+                        LabelUI.SetActive(false);
                     }
                     inProgress = false;
-                    });
-                }
-                else
-                {
-                    Error("Could not send file " + url);
-                    UpdateLabel("Failed to upload");
-                    inProgress = false;
-                }
+                });
+            }
+            else
+            {
+                Error("Could not send file " + url);
+                UpdateLabel("Failed to upload");
+                inProgress = false;
+            }
 
-            });
         });
-
     }
 
 
     void UpdateLabel(string _message)
     {
         Log(_message);
-        label.GetHoloElement<HoloText>().text = _message;
-
+        LabelUI.FindInHierarchy("Label").GetHoloElement<HoloText>().text = _message;
     }
+
+    void showLabelUi()
+    {
+        LabelUI.SetActive(true);
+        LabelUI.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
+    }
+
 }
