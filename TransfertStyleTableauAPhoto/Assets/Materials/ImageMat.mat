@@ -12,7 +12,8 @@ Material:
   m_ShaderKeywords: _ADVANCEDSECTION_ON _COLORSPACE_DEFAULT _COMMONSECTION_ON _FRESNELLIGHTOPERATION_OVERLAY
     _FRESNELLIGHT_OFF _HIGHLIGHT_LERP _INDIRECT_OFF _INVERSEMAP_NONE _LAMBERTSHADING_OFF
     _LAMBERT_OFF _LIGHTMAPOPERATION_MULTIPLY _NORMALMODE_OFF _REFLECTION_OFF _SUPPORTDISTANCEFADE_ON
-    _USEFRESNELREFLECTION_ON _USETEXTURE_ON _UVSEC_UV1 _VERTEXCOLOROPERATION_OFF
+    _SUPPORTVFACE_ON _USEFRESNELREFLECTION_ON _UVSEC_UV1 _VERTEXCOLOROPERATION_OFF
+    _VERTEXDISP_NOR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -70,7 +71,7 @@ Material:
     - _ColorSpace: 0
     - _CommonSection: 1
     - _Contrast: 0.5
-    - _Cull: 2
+    - _Cull: 0
     - _CustomFogEndDistance: 45
     - _CustomFogStartDistance: 5
     - _DepthOffsetFactor: 0
@@ -156,7 +157,7 @@ Material:
     - __SLICEPLANE_FILL: 0
     - __SLICEPLANE_ON: 0
     - __VERTEXDISPLACEMENT_ON: 0
-    - _supportVFace: 0
+    - _supportVFace: 1
     m_Colors:
     - _AmbientColor: {r: 0.2, g: 0.2, b: 0.25, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}

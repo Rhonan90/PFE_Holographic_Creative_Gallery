@@ -18,6 +18,8 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     public HoloGameObject LabelUI;
     public HoloGameObject StyleChoice;
     public HoloGameObject Chevalet;
+    public HoloGameObject photoViewer;
+    public HoloGameObject imagePrefab;
 
     private bool xpActivated = false;
 
@@ -184,6 +186,13 @@ public class PhotoCaptureBehaviour : HoloBehaviour
             }
             photoCaptureComponent.ReleasePhotoID(_id);
             LabelUI.SetActive(false);
+            picture.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(path);
+            picture.SetActive(true);
+
+
+            HoloGameObject temp = imagePrefab.Duplicate(imagePrefab.transform.position,photoViewer);
+            temp.SetActive(true);
+            temp.GetHoloElement<HoloImage>().SetFile(path);
         });
         inProgress = false;
 
@@ -225,8 +234,8 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                         Log("Texture loaded " + _width + "x" + _height);
                         if (xpActivated)
                             picture.SetActive(true);
-                        picture.transform.position = LabelUI.transform.position;
-                        picture.transform.localScale = new HoloVector3((float)_width / 500f, (float)_height / 500f, 1f);
+                        //picture.transform.position = LabelUI.transform.position;
+                        //picture.transform.localScale = new HoloVector3((float)_width / 500f, (float)_height / 500f, 1f);
                         UpdateLabel("Done!");
                         LabelUI.SetActive(false);
                         toile.GetHoloElementInChildren<HoloRenderer>().material = picture.GetHoloElementInChildren<HoloRenderer>().material;
