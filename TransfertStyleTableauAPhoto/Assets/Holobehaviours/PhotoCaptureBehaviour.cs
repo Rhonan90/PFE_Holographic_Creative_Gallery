@@ -13,11 +13,13 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     public PhotoCaptureComponent photoCaptureComponent;
 
     public HoloGameObject picture;
+    public HoloGameObject toile;
     //private HoloGameObject camera;
     public HoloGameObject LabelUI;
     public HoloGameObject StyleChoice;
+    public HoloGameObject Chevalet;
 
-
+    private bool xpActivated = false;
 
     public HoloGameObject tableau1;
     public HoloGameObject tableau2;
@@ -95,49 +97,51 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
     private void OnposeStarted(HandPose handPose, Handness handness)
     {
-        if (handPose == HandPose.HandOpenedSky)
+        if (xpActivated)
         {
-            if (inProgress)
+            if (handPose == HandPose.HandOpenedSky)
             {
-                Log("Already in progress");
-                return;
+                if (inProgress)
+                {
+                    Log("Already in progress");
+                    return;
+                }
+                StyleChoice.SetActive(true);
+                StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
+                StyleChoice.transform.rotation = HoloCamera.mainCamera.transform.rotation;
+                inProgress = true;
             }
-            StyleChoice.SetActive(true);
-            StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
-            StyleChoice.transform.rotation = HoloCamera.mainCamera.transform.rotation;
-            inProgress = true;
-        }
 
-        if (handPose == HandPose.HandOpenedGround)
-        {
-            if (inProgress)
+            if (handPose == HandPose.HandOpenedGround)
             {
-                Log("Already in progress");
-                return;
+                if (inProgress)
+                {
+                    Log("Already in progress");
+                    return;
+                }
+                if (chosenPhotoIndex == null)
+                {
+                    Log("No photo taken yet");
+                    return;
+                }
+                if (styleIndex == null)
+                {
+                    Log("No style chosen yet");
+                    return;
+                }
+                sendPhotoToServer(chosenPhotoIndex.Value, styleIndex.Value);
             }
-            if (chosenPhotoIndex == null)
-            {
-                Log("No photo taken yet");
-                return;
-            }
-            if (styleIndex == null)
-            {
-                Log("No style chosen yet");
-                return;
-            }
-            sendPhotoToServer(chosenPhotoIndex.Value, styleIndex.Value);
-        }
 
-        if (handPose == HandPose.IndexPinch)
-        {
-            if (inProgress)
+            if (handPose == HandPose.IndexPinch)
             {
-                Log("Already in progress");
-                return;
+                if (inProgress)
+                {
+                    Log("Already in progress");
+                    return;
+                }
+                LaunchPhotoCapture();
             }
-            LaunchPhotoCapture();
         }
-
     }
 
     public void LaunchPhotoCapture()
@@ -219,11 +223,13 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                     else
                     {
                         Log("Texture loaded " + _width + "x" + _height);
-                        picture.SetActive(true);
+                        if (xpActivated)
+                            picture.SetActive(true);
                         picture.transform.position = LabelUI.transform.position;
                         picture.transform.localScale = new HoloVector3((float)_width / 500f, (float)_height / 500f, 1f);
                         UpdateLabel("Done!");
                         LabelUI.SetActive(false);
+                        toile.GetHoloElementInChildren<HoloRenderer>().material = picture.GetHoloElementInChildren<HoloRenderer>().material;
                     }
                     inProgress = false;
                 });
@@ -234,7 +240,6 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                 UpdateLabel("Failed to upload");
                 inProgress = false;
             }
-
         });
     }
 
@@ -249,6 +254,22 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     {
         LabelUI.SetActive(true);
         LabelUI.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
+    }
+
+    public void StartXp()
+    {
+        xpActivated = true;
+        Chevalet.SetActive(true);
+    }
+
+    public void EndXp()
+    {
+        xpActivated = false;
+        LabelUI.SetActive(false);
+        StyleChoice.SetActive(false);
+        picture.SetActive(false);
+        Chevalet.SetActive(false);
+        inProgress = false;
     }
 
 }
