@@ -150,14 +150,13 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     {
         //StyleChoice.SetActive(false);
         UpdateLabel("Taking picture, don't move");
-
+        inProgress = true;
         showLabelUi();
         photoCaptureComponent.TakePicture(OnPhotoTaken);
     }
 
     void OnPhotoTaken(bool _success, int _id)
     {
-        inProgress = true;
         if (!_success)
         {
             Error("Failed to take photo");
@@ -202,9 +201,13 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     {
         showLabelUi();
         inProgress = true;
-        int lastSlashIndex = photos[photoIndex].LastIndexOf("/");
+        int lastSlashIndex = photos[photoIndex].LastIndexOf("\\");
         string filename = photos[photoIndex].Substring(lastSlashIndex + 1);
+        string tempPath = photos[photoIndex].Substring(0, lastSlashIndex);
+        tempPath = tempPath + "udnie$" + filename;
         Log(filename);
+
+        FileHelper.CopyFile(photos[photoIndex],tempPath);
 
         // Run the simple server in Server/CameraCaptureServer.py  IF server is hosted locally
         //string url = "http://"+NetworkHelper.GetHoloSceneServerIP()+":8000/" + filename;  
@@ -212,7 +215,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
         // IF server is NOT hoster locally
         string serverOfHostIp = "192.168.43.186";
-        string url = "http://" + serverOfHostIp + ":33900/" + filename;
+        string url = "http://" + serverOfHostIp + ":33900/" + "udnie$" + filename;
 
         Log("Uploading to " + url);
         UpdateLabel("Uploading photo");
@@ -222,7 +225,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
             {
                 Log("Set texture from file " + url);
                 UpdateLabel("Donwloading process photo");
-                picture.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
+                toile.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
                 {
                     if (_width == 0)
                     {
@@ -232,13 +235,12 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                     else
                     {
                         Log("Texture loaded " + _width + "x" + _height);
-                        if (xpActivated)
-                            picture.SetActive(true);
+                        //if (xpActivated)
+                        //    picture.SetActive(true);
                         //picture.transform.position = LabelUI.transform.position;
                         //picture.transform.localScale = new HoloVector3((float)_width / 500f, (float)_height / 500f, 1f);
                         UpdateLabel("Done!");
                         LabelUI.SetActive(false);
-                        toile.GetHoloElementInChildren<HoloRenderer>().material = picture.GetHoloElementInChildren<HoloRenderer>().material;
                     }
                     inProgress = false;
                 });
