@@ -243,12 +243,8 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
         FileHelper.CopyFile(photosPath[photoIndex],tempPath);
 
-        // Run the simple server in Server/CameraCaptureServer.py  IF server is hosted locally
-        //string url = "http://"+NetworkHelper.GetHoloSceneServerIP()+":8000/" + filename;  
-        //string url = "http://" + NetworkHelper.GetHoloSceneServerIP() + ":33900/" + filename;
-
-        // IF server is NOT hoster locally
-        string serverOfHostIp = "192.168.43.112";  //192.168.43.186 maxime
+        // Run command  ServerTF/CameraCaptureServer.py runServer  to start the server
+        string serverOfHostIp = NetworkHelper.GetHoloSceneServerIP();  //192.168.43.186 maxime    192.168.43.112 Quentin     192.168.56.1 Paul  pour les tests en local sur la 4G de Paul
         string url = "http://" + serverOfHostIp + ":33900/" + styles[styleIndex] + "$" + filename;
 
         Log("Uploading to " + url);
@@ -265,6 +261,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                     {
                         Error("Could not set texture");
                         UpdateLabel("Failed to download");
+                        HoloCoroutine.StartCoroutine(HideLabelAfterTimeCoroutine);
                     }
                     else
                     {
