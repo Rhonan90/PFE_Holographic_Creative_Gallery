@@ -27,9 +27,11 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     public HoloGameObject tableau1;
     public HoloGameObject tableau2;
     public HoloGameObject tableau3;
+    public HoloGameObject tableau4;
     private GazeComponent tableau1GazeComponent;
     private GazeComponent tableau2GazeComponent;
     private GazeComponent tableau3GazeComponent;
+    private GazeComponent tableau4GazeComponent;
 
     private List<GazeComponent> gazeComponents;
 
@@ -41,7 +43,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     private int? chosenPhotoIndex = null;
     
     private int? styleIndex; //?? not sure yet if int is the best indicator, mb style name better ?
-    private string[] styles = { "mosaic", "rain-princess", "udnie", "scream" };
+    private string[] styles = { "mosaic", "rain-princess", "candy", "scream" };
 
     bool inProgress = false;
 
@@ -80,6 +82,12 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         tableau3GazeComponent.attribute.UseSnap = true;
         tableau3GazeComponent.OnGazeEvent += ScanGazeComponent_OnGazeEvent;
         gazeComponents.Add(tableau3GazeComponent);
+
+        tableau4GazeComponent = Engine.AddHoloComponent<GazeComponent>(nameof(tableau4GazeComponent));
+        tableau4GazeComponent.attribute.GameObject = tableau4;
+        tableau4GazeComponent.attribute.UseSnap = true;
+        tableau4GazeComponent.OnGazeEvent += ScanGazeComponent_OnGazeEvent;
+        gazeComponents.Add(tableau4GazeComponent);
 
         timer = new Timer(2,() => { canGesture = true; });
         timer.Start();
@@ -121,7 +129,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                     return;
                 }
                 StyleChoice.SetActive(true);
-                StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
+                StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
                 StyleChoice.transform.rotation = HoloCamera.mainCamera.transform.rotation;
                 inProgress = true;
 
@@ -240,8 +248,8 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         //string url = "http://" + NetworkHelper.GetHoloSceneServerIP() + ":33900/" + filename;
 
         // IF server is NOT hoster locally
-        string serverOfHostIp = "192.168.43.186";
-        string url = "http://" + serverOfHostIp + ":33900/" + "udnie$" + filename;
+        string serverOfHostIp = "192.168.43.112";  //192.168.43.186 maxime
+        string url = "http://" + serverOfHostIp + ":33900/" + styles[styleIndex] + "$" + filename;
 
         Log("Uploading to " + url);
         UpdateLabel("Uploading photo");
@@ -290,7 +298,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     void ShowLabelUi()
     {
         LabelUI.SetActive(true);
-        LabelUI.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 2;
+        LabelUI.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
     }
 
     public void StartXp()
