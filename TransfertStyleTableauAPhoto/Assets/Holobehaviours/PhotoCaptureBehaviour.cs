@@ -24,22 +24,19 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
     private bool xpActivated = false;
 
-    public HoloGameObject tableau1;
-    public HoloGameObject tableau2;
-    public HoloGameObject tableau3;
-    public HoloGameObject tableau4;
-    private GazeComponent tableau1GazeComponent;
-    private GazeComponent tableau2GazeComponent;
-    private GazeComponent tableau3GazeComponent;
-    private GazeComponent tableau4GazeComponent;
+    public HoloGameObject tableau1; private GazeComponent tableau1GazeComponent;
+    public HoloGameObject tableau2; private GazeComponent tableau2GazeComponent;
+    public HoloGameObject tableau3; private GazeComponent tableau3GazeComponent;
+    public HoloGameObject tableau4; private GazeComponent tableau4GazeComponent;
 
     private List<GazeComponent> gazeComponents;
 
     private Timer timer;
     private bool canGesture = false;
 
-    private List<string> photosPath;
-    private List<HoloGameObject> photos;
+    private List<string> photosPath;     //path des photos prises pour y accéder/les supprimer
+    private List<HoloGameObject> photos;    //photos prises et affichées disponibles à la sélection
+    private List<HoloGameObject> transformedPhotos;     //photos transformées récupérées depuis le serveur
     private int? chosenPhotoIndex = null;
     
     private int? styleIndex; //?? not sure yet if int is the best indicator, mb style name better ?
@@ -63,6 +60,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         gazeComponents = new List<GazeComponent>();
         photosPath = new List<string>();
         photos = new List<HoloGameObject>();
+        transformedPhotos = new List<HoloGameObject>();
 
         //Interaction choix de style 
         tableau1GazeComponent = Engine.AddHoloComponent<GazeComponent>(nameof(tableau1GazeComponent));
@@ -255,7 +253,12 @@ public class PhotoCaptureBehaviour : HoloBehaviour
             {
                 Log("Set texture from file " + url);
                 UpdateLabel("Donwloading process photo");
-                toile.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
+
+                HoloGameObject newTransformedPhoto = toile.Duplicate(toile.transform.position, _parent : SceneHelper.GetSceneRoot(Engine),_name: filename + "_" + styles[styleIndex] );
+                transformedPhotos.Add(newTransformedPhoto);
+                HandlerHelper.SetHandlerEditable(newTransformedPhoto, true);
+
+                newTransformedPhoto.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
                 {
                     if (_width == 0)
                     {
@@ -266,10 +269,6 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                     else
                     {
                         Log("Texture loaded " + _width + "x" + _height);
-                        //if (xpActivated)
-                        //    picture.SetActive(true);
-                        //picture.transform.position = LabelUI.transform.position;
-                        //picture.transform.localScale = new HoloVector3((float)_width / 500f, (float)_height / 500f, 1f);
                         UpdateLabel("Done!");
                         LabelUI.SetActive(false);
                     }
@@ -306,6 +305,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         {
             picture.SetActive(true);
         }
+        SetActiveTransformedPhotos(true);
     }
 
     public void EndXp()
@@ -315,6 +315,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         StyleChoice.SetActive(false);
         picture.SetActive(false);
         Chevalet.SetActive(false);
+        SetActiveTransformedPhotos(false);
         inProgress = false;
     }
 
@@ -329,17 +330,22 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
     private void SelectPicture(int index)
     {
-
         for (int i = 0; i < photos.Count; i++)
         {
-            //((UnityEngine.GameObject) photos[i]).GetComponent<UnityEngine.UI.Outline>().enabled = false;
             photos[i].GetChildren().ForEach((outine) => { outine.SetActive(false); });
         }
-        //((UnityEngine.GameObject)photos[index]).GetComponent<UnityEngine.UI.Outline>().enabled = true;
         photos[index].GetChildren().ForEach((outine) => { outine.SetActive(true); });
     }
 
-    public void testFunc()
+    private void SetActiveTransformedPhotos(bool state)
+    {
+        for (int i = 0; i < transformedPhotos.Count; i++)
+        {
+            transformedPhotos[i].SetActive(state);
+        }
+    }
+
+    public void TestFunc()
     {
         Log("test");
     }
