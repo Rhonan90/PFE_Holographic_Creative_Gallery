@@ -23,13 +23,14 @@ public class ExperienceFlowManager : HoloBehaviour
 
     public override void Start()
     {
-        gestureComp.RegisterPose(HandPose.HandClenched);
+        gestureComp.RegisterPose(HandPose.HandFaceToEachOther);
         gestureComp.OnPoseStart += OnPoseStarted;
         firstXpBehaviour = (PhotoCaptureBehaviour) firstXpGestureManager.GetBehaviour("PhotoCaptureBehaviour");
         secondXpBehaviour = (HoloRoomChange) secondXpGestureManager.GetBehaviour("HoloRoomChange");
 
 
         firstXpTuto.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
+        firstXpTuto.transform.position.y = HoloCamera.mainCamera.transform.position.y;
         firstXpTuto.SetActive(true);
     }
 
@@ -44,7 +45,7 @@ public class ExperienceFlowManager : HoloBehaviour
 
     private void OnPoseStarted(HandPose handPose, Handness handness)
     {
-        if (handPose == HandPose.HandClenched && xpStarted)
+        if (handPose == HandPose.HandFaceToEachOther && xpStarted)
         {
             if (firstXP)
             {

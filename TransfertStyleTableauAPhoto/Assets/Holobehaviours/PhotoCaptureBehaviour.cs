@@ -1,4 +1,5 @@
 ﻿using Holo;
+using System.Collections;
 using System.Collections.Generic;
 
 
@@ -23,19 +24,23 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
     private bool xpActivated = false;
 
-    public HoloGameObject tableau1;
-    public HoloGameObject tableau2;
-    public HoloGameObject tableau3;
-    private GazeComponent tableau1GazeComponent;
-    private GazeComponent tableau2GazeComponent;
-    private GazeComponent tableau3GazeComponent;
+    public HoloGameObject tableau1; private GazeComponent tableau1GazeComponent;
+    public HoloGameObject tableau2; private GazeComponent tableau2GazeComponent;
+    public HoloGameObject tableau3; private GazeComponent tableau3GazeComponent;
+    public HoloGameObject tableau4; private GazeComponent tableau4GazeComponent;
 
     private List<GazeComponent> gazeComponents;
 
-    private List<string> photos;
+    private Timer timer;
+    private bool canGesture = false;
+
+    private List<string> photosPath;     //path des photos prises pour y accéder/les supprimer
+    private List<HoloGameObject> photos;    //photos prises et affichées disponibles à la sélection
+    private List<HoloGameObject> transformedPhotos;     //photos transformées récupérées depuis le serveur
     private int? chosenPhotoIndex = null;
     
     private int? styleIndex; //?? not sure yet if int is the best indicator, mb style name better ?
+    private string[] styles = { "mosaic", "rain-princess", "candy", "scream" };
 
     bool inProgress = false;
 
@@ -44,7 +49,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         //gazeComponent.OnGazeEvent += OnGazeEvent;
         UpdateLabel("Ready");
         gestureComp.RegisterPose(HandPose.HandOpenedSky);
-        gestureComp.RegisterPose(HandPose.IndexPinch);
+        gestureComp.RegisterPose(HandPose.TwoFingerUp);
         gestureComp.RegisterPose(HandPose.HandOpenedGround);
         gestureComp.OnPoseStart += OnposeStarted;
 
@@ -53,7 +58,9 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         //camera = camera.FindInScene("Camera");
 
         gazeComponents = new List<GazeComponent>();
-        photos = new List<string>();
+        photosPath = new List<string>();
+        photos = new List<HoloGameObject>();
+        transformedPhotos = new List<HoloGameObject>();
 
         //Interaction choix de style 
         tableau1GazeComponent = Engine.AddHoloComponent<GazeComponent>(nameof(tableau1GazeComponent));
@@ -73,6 +80,17 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         tableau3GazeComponent.attribute.UseSnap = true;
         tableau3GazeComponent.OnGazeEvent += ScanGazeComponent_OnGazeEvent;
         gazeComponents.Add(tableau3GazeComponent);
+
+        tableau4GazeComponent = Engine.AddHoloComponent<GazeComponent>(nameof(tableau4GazeComponent));
+        tableau4GazeComponent.attribute.GameObject = tableau4;
+        tableau4GazeComponent.attribute.UseSnap = true;
+        tableau4GazeComponent.OnGazeEvent += ScanGazeComponent_OnGazeEvent;
+        gazeComponents.Add(tableau4GazeComponent);
+
+        timer = new Timer(2,() => { canGesture = true; });
+        timer.Start();
+        canGesture = false;
+
     }
 
     public override void OnDestroy()
@@ -99,7 +117,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
     private void OnposeStarted(HandPose handPose, Handness handness)
     {
-        if (xpActivated)
+        if (xpActivated && canGesture)
         {
             if (handPose == HandPose.HandOpenedSky)
             {
@@ -109,9 +127,12 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                     return;
                 }
                 StyleChoice.SetActive(true);
-                StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
+                StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
                 StyleChoice.transform.rotation = HoloCamera.mainCamera.transform.rotation;
                 inProgress = true;
+
+                timer.Start();
+                canGesture = false;
             }
 
             if (handPose == HandPose.HandOpenedGround)
@@ -131,10 +152,14 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                     Log("No style chosen yet");
                     return;
                 }
-                sendPhotoToServer(chosenPhotoIndex.Value, styleIndex.Value);
+                SendPhotoToServer(chosenPhotoIndex.Value, styleIndex.Value);
+
+
+                timer.Start();
+                canGesture = false;
             }
 
-            if (handPose == HandPose.IndexPinch)
+            if (handPose == HandPose.TwoFingerUp)
             {
                 if (inProgress)
                 {
@@ -142,6 +167,9 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                     return;
                 }
                 LaunchPhotoCapture();
+
+                timer.Start();
+                canGesture = false;
             }
         }
     }
@@ -151,7 +179,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         //StyleChoice.SetActive(false);
         UpdateLabel("Taking picture, don't move");
         inProgress = true;
-        showLabelUi();
+        ShowLabelUi();
         photoCaptureComponent.TakePicture(OnPhotoTaken);
     }
 
@@ -168,8 +196,8 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         string filename = "Photo_" + _id + ".png";
         string path = PathHelper.Combine(PathHelper.GetPersistentDataPath(), filename);
         //Log("path to save = " + path);
-        photos.Add(path);
-        chosenPhotoIndex = photos.Count - 1;
+        photosPath.Add(path);
+        chosenPhotoIndex = photosPath.Count - 1;
 
         UpdateLabel("Saving photo");
 
@@ -187,58 +215,60 @@ public class PhotoCaptureBehaviour : HoloBehaviour
             LabelUI.SetActive(false);
             picture.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(path);
             picture.SetActive(true);
+            
 
 
-            HoloGameObject temp = imagePrefab.Duplicate(imagePrefab.transform.position,photoViewer);
+            HoloGameObject temp = imagePrefab.Duplicate(imagePrefab.transform.position,photoViewer,chosenPhotoIndex.Value.ToString());
+            photos.Add(temp);
+            SelectPicture(chosenPhotoIndex.Value);
             temp.SetActive(true);
             temp.GetHoloElement<HoloImage>().SetFile(path);
+            
         });
         inProgress = false;
 
     }
 
-    void sendPhotoToServer(int photoIndex, int styleIndex)
+    void SendPhotoToServer(int photoIndex, int styleIndex)
     {
-        showLabelUi();
+        ShowLabelUi();
         inProgress = true;
-        int lastSlashIndex = photos[photoIndex].LastIndexOf("\\");
-        string filename = photos[photoIndex].Substring(lastSlashIndex + 1);
-        string tempPath = photos[photoIndex].Substring(0, lastSlashIndex);
-        tempPath = tempPath + "udnie$" + filename;
+        int lastSlashIndex = photosPath[photoIndex].LastIndexOf("\\");
+        string filename = photosPath[photoIndex].Substring(lastSlashIndex + 1);
+        string tempPath = photosPath[photoIndex].Substring(0, lastSlashIndex);
+        tempPath = tempPath + styles[styleIndex] + "$" + filename;
         Log(filename);
 
-        FileHelper.CopyFile(photos[photoIndex],tempPath);
+        FileHelper.CopyFile(photosPath[photoIndex],tempPath);
 
-        // Run the simple server in Server/CameraCaptureServer.py  IF server is hosted locally
-        //string url = "http://"+NetworkHelper.GetHoloSceneServerIP()+":8000/" + filename;  
-        //string url = "http://" + NetworkHelper.GetHoloSceneServerIP() + ":33900/" + filename;
-
-        // IF server is NOT hoster locally
-        string serverOfHostIp = "192.168.43.186";
-        string url = "http://" + serverOfHostIp + ":33900/" + "udnie$" + filename;
+        // Run command  ServerTF/CameraCaptureServer.py runServer  to start the server
+        string serverOfHostIp = NetworkHelper.GetHoloSceneServerIP();  //192.168.43.186 maxime    192.168.43.112 Quentin     192.168.56.1 Paul  pour les tests en local sur la 4G de Paul
+        string url = "http://" + serverOfHostIp + ":33900/" + styles[styleIndex] + "$" + filename;
 
         Log("Uploading to " + url);
         UpdateLabel("Uploading photo");
-        HTTPHelper.SendFile(url, new Dictionary<string, string>(), photos[photoIndex], (_sendSuccess, _sendResult) =>
+        HTTPHelper.SendFile(url, new Dictionary<string, string>(), photosPath[photoIndex], (_sendSuccess, _sendResult) =>
         {
             if (_sendSuccess)
             {
                 Log("Set texture from file " + url);
                 UpdateLabel("Donwloading process photo");
-                toile.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
+
+                HoloGameObject newTransformedPhoto = toile.Duplicate(toile.transform.position, _parent : SceneHelper.GetSceneRoot(Engine),_name: filename + "_" + styles[styleIndex] );
+                transformedPhotos.Add(newTransformedPhoto);
+                HandlerHelper.SetHandlerEditable(newTransformedPhoto, true);
+
+                newTransformedPhoto.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
                 {
                     if (_width == 0)
                     {
                         Error("Could not set texture");
                         UpdateLabel("Failed to download");
+                        HoloCoroutine.StartCoroutine(HideLabelAfterTimeCoroutine);
                     }
                     else
                     {
                         Log("Texture loaded " + _width + "x" + _height);
-                        //if (xpActivated)
-                        //    picture.SetActive(true);
-                        //picture.transform.position = LabelUI.transform.position;
-                        //picture.transform.localScale = new HoloVector3((float)_width / 500f, (float)_height / 500f, 1f);
                         UpdateLabel("Done!");
                         LabelUI.SetActive(false);
                     }
@@ -261,16 +291,21 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         LabelUI.FindInHierarchy("Label").GetHoloElement<HoloText>().text = _message;
     }
 
-    void showLabelUi()
+    void ShowLabelUi()
     {
         LabelUI.SetActive(true);
-        LabelUI.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 5;
+        LabelUI.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
     }
 
     public void StartXp()
     {
         xpActivated = true;
         Chevalet.SetActive(true);
+        if (chosenPhotoIndex != null)
+        {
+            picture.SetActive(true);
+        }
+        SetActiveTransformedPhotos(true);
     }
 
     public void EndXp()
@@ -280,7 +315,44 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         StyleChoice.SetActive(false);
         picture.SetActive(false);
         Chevalet.SetActive(false);
+        SetActiveTransformedPhotos(false);
         inProgress = false;
     }
 
+    public void SelectPhoto(HoloGameObject image)
+    {
+        int num = 0;
+        int.TryParse(image.name,out num);
+        chosenPhotoIndex = num;
+        picture.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(photosPath[chosenPhotoIndex.Value]);
+        SelectPicture(chosenPhotoIndex.Value);
+    }
+
+    private void SelectPicture(int index)
+    {
+        for (int i = 0; i < photos.Count; i++)
+        {
+            photos[i].GetChildren().ForEach((outine) => { outine.SetActive(false); });
+        }
+        photos[index].GetChildren().ForEach((outine) => { outine.SetActive(true); });
+    }
+
+    private void SetActiveTransformedPhotos(bool state)
+    {
+        for (int i = 0; i < transformedPhotos.Count; i++)
+        {
+            transformedPhotos[i].SetActive(state);
+        }
+    }
+
+    public void TestFunc()
+    {
+        Log("test");
+    }
+
+    IEnumerator HideLabelAfterTimeCoroutine()
+    {
+        yield return HoloCoroutine.WaitForSeconds(3);
+        LabelUI.SetActive(false);
+    }
 }
