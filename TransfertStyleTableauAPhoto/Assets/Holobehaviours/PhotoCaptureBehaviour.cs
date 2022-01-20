@@ -15,10 +15,13 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
     public HoloGameObject picture;
     public HoloGameObject toile;
-    //private HoloGameObject camera;
+    public HoloGameObject toileHolder;
+    public List<HoloGameObject> toileHolders;
+    private int currIndexToile = 0;
     public HoloGameObject LabelUI;
     public HoloGameObject StyleChoice;
     public HoloGameObject Chevalet;
+    private HoloQuaternion chevaletInitialRotation;
     public HoloGameObject photoViewer;
     public HoloGameObject imagePrefab;
 
@@ -91,6 +94,12 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         timer.Start();
         canGesture = false;
 
+        chevaletInitialRotation = Chevalet.transform.rotation;
+
+        for (int i = 0; i < toileHolders.Count; i++)
+        {
+            HandlerHelper.SetHandlerEditable(toileHolders[i],true);
+        }
     }
 
     public override void OnDestroy()
@@ -254,11 +263,22 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                 Log("Set texture from file " + url);
                 UpdateLabel("Donwloading process photo");
 
-                HoloGameObject newTransformedPhoto = toile.Duplicate(toile.transform.position, _parent : SceneHelper.GetSceneRoot(Engine),_name: filename + "_" + styles[styleIndex] );
-                transformedPhotos.Add(newTransformedPhoto);
-                HandlerHelper.SetHandlerEditable(newTransformedPhoto, true);
+                //HoloGameObject newTransformedPhoto = toileHolder.Duplicate(toile.transform.position,_name: filename + "_" + styles[styleIndex] );
+                //newTransformedPhoto.SetActive(true);
+                //transformedPhotos.Add(newTransformedPhoto);
 
-                newTransformedPhoto.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
+                //HandlerHelper.SetHandlerEditable(newTransformedPhoto.transform.parent.gameObject, true);
+                //HoloGameObject picture = newTransformedPhoto.FindInHierarchy("ToileSubstitute");
+
+
+                toileHolders[currIndexToile].transform.position = Chevalet.transform.position;
+                toileHolders[currIndexToile].transform.rotation = toileHolder.transform.rotation;
+                HoloGameObject picture = toileHolders[currIndexToile].FindInHierarchy("ToileSubstitute");
+                picture.transform.rotation = toileHolder.FindInHierarchy("ToileSubstitute").transform.rotation;
+                transformedPhotos.Add(picture);
+                currIndexToile = (currIndexToile + 1) % toileHolders.Count;
+
+                picture.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
                 {
                     if (_width == 0)
                     {

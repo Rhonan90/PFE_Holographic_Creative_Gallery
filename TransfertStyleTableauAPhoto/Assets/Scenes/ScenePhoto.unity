@@ -421,6 +421,114 @@ MonoBehaviour:
   serializedGameObjects: []
   serializedComponents:
   - {fileID: 164862967}
+--- !u!1 &183146947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 183146948}
+  m_Layer: 0
+  m_Name: ToileHolder
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &183146948
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 183146947}
+  m_LocalRotation: {x: -0, y: 0.9959225, z: -0, w: -0.0902135}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2.2252645, y: 2.2252636, z: 2.2252645}
+  m_Children:
+  - {fileID: 278990175}
+  m_Father: {fileID: 8923773027356686486}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &278990170
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 278990175}
+  - component: {fileID: 278990174}
+  - component: {fileID: 278990173}
+  m_Layer: 0
+  m_Name: ToileSubstitute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!23 &278990173
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278990170}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &278990174
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278990170}
+  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
+--- !u!4 &278990175
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 278990170}
+  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
+  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
+  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
+  m_Children: []
+  m_Father: {fileID: 183146948}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &374193395
 GameObject:
   m_ObjectHideFlags: 0
@@ -649,6 +757,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489818908}
   m_CullTransparentMesh: 0
+--- !u!1 &516325492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 516325493}
+  - component: {fileID: 516325495}
+  - component: {fileID: 516325494}
+  m_Layer: 0
+  m_Name: ToileSubstitute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &516325493
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516325492}
+  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
+  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
+  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
+  m_Children: []
+  m_Father: {fileID: 1886963544}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &516325494
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516325492}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &516325495
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 516325492}
+  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
 --- !u!1 &522270805
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,6 +1134,83 @@ MonoBehaviour:
   serializedGameObjects:
   - {fileID: 612866676}
   serializedComponents: []
+--- !u!1 &636094317
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 636094318}
+  - component: {fileID: 636094320}
+  - component: {fileID: 636094319}
+  m_Layer: 0
+  m_Name: ToileSubstitute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &636094318
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636094317}
+  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
+  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
+  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
+  m_Children: []
+  m_Father: {fileID: 1168128510}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &636094319
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636094317}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &636094320
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 636094317}
+  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
 --- !u!1 &702489487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1026,6 +1288,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 702489487}
   m_CullTransparentMesh: 0
+--- !u!1 &783270105
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 783270106}
+  - component: {fileID: 783270108}
+  - component: {fileID: 783270107}
+  m_Layer: 0
+  m_Name: ToileSubstitute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &783270106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783270105}
+  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
+  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
+  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
+  m_Children: []
+  m_Father: {fileID: 2117683301}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &783270107
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783270105}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &783270108
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 783270105}
+  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
 --- !u!1 &783990283
 GameObject:
   m_ObjectHideFlags: 0
@@ -1114,6 +1453,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783990283}
   m_CullTransparentMesh: 0
+--- !u!1 &844353703
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 844353705}
+  - component: {fileID: 844353704}
+  m_Layer: 0
+  m_Name: ToileHolder (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &844353704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844353703}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourFullName: HoloForge.EditionModeBehaviour
+  manager: {fileID: 0}
+  behaviourDefinitionRelativeFilePath: 
+  sceneOverridesRelativeFilePath: 
+  editorParametersJson: 
+  runtimeParametersJson: 
+  editorParameters:
+    behaviourName: HoloForge.EditionModeBehaviour
+    entries:
+    - name: editModeActions
+      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: '{HFUnityEditorSerializationMode::ENUM::Holo.EditModeActions,
+        HSComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ActivateObject}'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 844353704}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: handlerTarget
+      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 844353704}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: isGizmoDisplayed
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 844353704}
+      serializationMode: HFUnityEditorSerializationMode
+    components: []
+  runtimeParameters:
+    behaviourName: 
+    entries: []
+    components: []
+  attachedAssetId: 
+  originIsClient: 0
+  serializedGameObjects: []
+  serializedComponents: []
+--- !u!4 &844353705
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 844353703}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 82.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1733089857}
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &861535571
 GameObject:
   m_ObjectHideFlags: 0
@@ -1709,6 +2131,172 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055498789}
   m_CullTransparentMesh: 0
+--- !u!1 &1096274833
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1096274835}
+  - component: {fileID: 1096274834}
+  m_Layer: 0
+  m_Name: ToileHolder (5)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1096274834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096274833}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourFullName: HoloForge.EditionModeBehaviour
+  manager: {fileID: 0}
+  behaviourDefinitionRelativeFilePath: 
+  sceneOverridesRelativeFilePath: 
+  editorParametersJson: 
+  runtimeParametersJson: 
+  editorParameters:
+    behaviourName: HoloForge.EditionModeBehaviour
+    entries:
+    - name: editModeActions
+      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: '{HFUnityEditorSerializationMode::ENUM::Holo.EditModeActions,
+        HSComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ActivateObject}'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1096274834}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: handlerTarget
+      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1096274834}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: isGizmoDisplayed
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1096274834}
+      serializationMode: HFUnityEditorSerializationMode
+    components: []
+  runtimeParameters:
+    behaviourName: 
+    entries: []
+    components: []
+  attachedAssetId: 
+  originIsClient: 0
+  serializedGameObjects: []
+  serializedComponents: []
+--- !u!4 &1096274835
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1096274833}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 82.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1998992525}
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1168128508
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1168128510}
+  - component: {fileID: 1168128509}
+  m_Layer: 0
+  m_Name: ToileHolder (3)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1168128509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168128508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourFullName: HoloForge.EditionModeBehaviour
+  manager: {fileID: 0}
+  behaviourDefinitionRelativeFilePath: 
+  sceneOverridesRelativeFilePath: 
+  editorParametersJson: 
+  runtimeParametersJson: 
+  editorParameters:
+    behaviourName: HoloForge.EditionModeBehaviour
+    entries:
+    - name: editModeActions
+      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: '{HFUnityEditorSerializationMode::ENUM::Holo.EditModeActions,
+        HSComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ActivateObject}'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1168128509}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: handlerTarget
+      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1168128509}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: isGizmoDisplayed
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1168128509}
+      serializationMode: HFUnityEditorSerializationMode
+    components: []
+  runtimeParameters:
+    behaviourName: 
+    entries: []
+    components: []
+  attachedAssetId: 
+  originIsClient: 0
+  serializedGameObjects: []
+  serializedComponents: []
+--- !u!4 &1168128510
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1168128508}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 82.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 636094318}
+  m_Father: {fileID: 0}
+  m_RootOrder: 14
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173697118
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,7 +2345,26 @@ MonoBehaviour:
     - name: toile
       serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::11}\"\r\n}"
+      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::15}\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1173697119}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: toileHolder
+      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::16}\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1173697119}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: toileHolders
+      serializedType: System.Collections.Generic.List`1[[Holo.HoloGameObject, HFHoloManager,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+      serializedValue: "[\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::18}\"\r\n
+        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::19}\"\r\n
+        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::20}\"\r\n
+        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::21}\"\r\n
+        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::22}\"\r\n
+        \ }\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1173697119}
       serializationMode: HFUnityEditorSerializationMode
@@ -2187,6 +2794,14 @@ MonoBehaviour:
   - {fileID: 1474390006}
   - {fileID: 1655693154}
   - {fileID: 914026117}
+  - {fileID: 278990170}
+  - {fileID: 183146947}
+  - {fileID: 0}
+  - {fileID: 2117683299}
+  - {fileID: 844353703}
+  - {fileID: 1168128508}
+  - {fileID: 1886963542}
+  - {fileID: 1096274833}
   serializedComponents: []
 --- !u!224 &1173697122
 RectTransform:
@@ -4979,6 +5594,83 @@ MonoBehaviour:
   originIsClient: 0
   serializedGameObjects: []
   serializedComponents: []
+--- !u!1 &1733089856
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1733089857}
+  - component: {fileID: 1733089859}
+  - component: {fileID: 1733089858}
+  m_Layer: 0
+  m_Name: ToileSubstitute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1733089857
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733089856}
+  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
+  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
+  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
+  m_Children: []
+  m_Father: {fileID: 844353705}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1733089858
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733089856}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1733089859
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1733089856}
+  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
 --- !u!1 &1773775813
 GameObject:
   m_ObjectHideFlags: 0
@@ -5164,6 +5856,89 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1886963542
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1886963544}
+  - component: {fileID: 1886963543}
+  m_Layer: 0
+  m_Name: ToileHolder (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1886963543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886963542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourFullName: HoloForge.EditionModeBehaviour
+  manager: {fileID: 0}
+  behaviourDefinitionRelativeFilePath: 
+  sceneOverridesRelativeFilePath: 
+  editorParametersJson: 
+  runtimeParametersJson: 
+  editorParameters:
+    behaviourName: HoloForge.EditionModeBehaviour
+    entries:
+    - name: editModeActions
+      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: '{HFUnityEditorSerializationMode::ENUM::Holo.EditModeActions,
+        HSComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ActivateObject}'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1886963543}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: handlerTarget
+      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1886963543}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: isGizmoDisplayed
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1886963543}
+      serializationMode: HFUnityEditorSerializationMode
+    components: []
+  runtimeParameters:
+    behaviourName: 
+    entries: []
+    components: []
+  attachedAssetId: 
+  originIsClient: 0
+  serializedGameObjects: []
+  serializedComponents: []
+--- !u!4 &1886963544
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1886963542}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 82.91, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 516325493}
+  m_Father: {fileID: 0}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1892261666
 GameObject:
   m_ObjectHideFlags: 0
@@ -5295,7 +6070,7 @@ Transform:
   - {fileID: 8923773027356686706}
   - {fileID: 8923773027356686700}
   m_Father: {fileID: 8923773027356686486}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1963478506
 GameObject:
@@ -5448,6 +6223,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1975942871}
   m_CullTransparentMesh: 0
+--- !u!1 &1998992524
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1998992525}
+  - component: {fileID: 1998992527}
+  - component: {fileID: 1998992526}
+  m_Layer: 0
+  m_Name: ToileSubstitute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1998992525
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998992524}
+  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
+  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
+  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
+  m_Children: []
+  m_Father: {fileID: 1096274835}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1998992526
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998992524}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1998992527
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998992524}
+  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
 --- !u!1 &2076923305
 GameObject:
   m_ObjectHideFlags: 0
@@ -5922,6 +6774,89 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2099381425}
   m_CullTransparentMesh: 0
+--- !u!1 &2117683299
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2117683301}
+  - component: {fileID: 2117683300}
+  m_Layer: 0
+  m_Name: ToileHolder (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2117683300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117683299}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourFullName: HoloForge.EditionModeBehaviour
+  manager: {fileID: 0}
+  behaviourDefinitionRelativeFilePath: 
+  sceneOverridesRelativeFilePath: 
+  editorParametersJson: 
+  runtimeParametersJson: 
+  editorParameters:
+    behaviourName: HoloForge.EditionModeBehaviour
+    entries:
+    - name: editModeActions
+      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: '{HFUnityEditorSerializationMode::ENUM::Holo.EditModeActions,
+        HSComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ActivateObject}'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 2117683300}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: handlerTarget
+      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 2117683300}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: isGizmoDisplayed
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 2117683300}
+      serializationMode: HFUnityEditorSerializationMode
+    components: []
+  runtimeParameters:
+    behaviourName: 
+    entries: []
+    components: []
+  attachedAssetId: 
+  originIsClient: 0
+  serializedGameObjects: []
+  serializedComponents: []
+--- !u!4 &2117683301
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2117683299}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 82, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 783270106}
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2133809609
 GameObject:
   m_ObjectHideFlags: 0
@@ -6597,7 +7532,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &8923773027356320951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6843,7 +7778,6 @@ GameObject:
   - component: {fileID: 8923773027356686606}
   - component: {fileID: 8923773027359586606}
   - component: {fileID: 8923773027358587886}
-  - component: {fileID: 8923773027356321071}
   m_Layer: 0
   m_Name: Toile
   m_TagString: Untagged
@@ -6851,19 +7785,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &8923773027356321071
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8923773027356321070}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 2.5304377, y: 1.7037368, z: 0.022379583}
-  m_Center: {x: -0.00000008940697, y: 0.00000047550324, z: 0.011189492}
 --- !u!1 &8923773027356321072
 GameObject:
   m_ObjectHideFlags: 0
@@ -7555,6 +8476,7 @@ Transform:
   m_Children:
   - {fileID: 8923773027356686608}
   - {fileID: 8923773027356686606}
+  - {fileID: 183146948}
   - {fileID: 1920608762}
   m_Father: {fileID: 0}
   m_RootOrder: 1
