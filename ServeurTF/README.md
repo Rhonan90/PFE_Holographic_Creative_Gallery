@@ -9,7 +9,7 @@ To run the program, you need to have Python installed, as [Pytorch](http://pytor
 * Clone the git repository
 * Make sure your device is connected to the same network as the Hololens. 
 * From the command line, go to the repository PFE_Holographic_Creative_Gallery/ServeurTF
-*Run the following line : 
+* Run the following line : 
 ```bash
 python CameraCaptureServer.py runserver
 ```
