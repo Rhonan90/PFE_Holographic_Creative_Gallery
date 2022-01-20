@@ -4,12 +4,12 @@ This repository contains a server using python and pytorch in order to do style 
 ## Requirements
 To run the program, you need to have Python installed, as [Pytorch](http://pytorch.org/) and [Scipy](https://www.scipy.org).
 
-## Usage
-RUN THE SERVER : 
-1- Clone the git repository
-2- Make sure your device is connected to the same network as the Hololens. 
-3- From the command line, go to the repository PFE_Holographic_Creative_Gallery/ServeurTF
-4 - Run the following line : 
+## Usage - RUN THE SERVER : 
+
+* Clone the git repository
+* Make sure your device is connected to the same network as the Hololens. 
+* From the command line, go to the repository PFE_Holographic_Creative_Gallery/ServeurTF
+*Run the following line : 
 ```bash
 python CameraCaptureServer.py runserver
 ```
