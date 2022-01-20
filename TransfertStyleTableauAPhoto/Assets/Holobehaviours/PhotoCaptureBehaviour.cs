@@ -116,8 +116,8 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                 if (_component == gazeComponents[i])
                 {
                     styleIndex = i;
-                    StyleChoice.SetActive(false);
-                    inProgress = false;
+                    //StyleChoice.SetActive(false);
+                    //inProgress = false;
                 }
             }
         }
@@ -135,13 +135,13 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                     Log("Already in progress");
                     return;
                 }
-                StyleChoice.SetActive(true);
-                StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
-                StyleChoice.transform.rotation = HoloCamera.mainCamera.transform.rotation;
-                inProgress = true;
+                //StyleChoice.SetActive(true);
+                //StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
+                //StyleChoice.transform.rotation = HoloCamera.mainCamera.transform.rotation;
+                //inProgress = true;
 
-                timer.Start();
-                canGesture = false;
+                //timer.Start();
+                //canGesture = false;
             }
 
             if (handPose == HandPose.HandOpenedGround)
@@ -326,6 +326,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
             picture.SetActive(true);
         }
         SetActiveTransformedPhotos(true);
+        StyleChoice.SetActive(true);
     }
 
     public void EndXp()

@@ -189,6 +189,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29791410}
   m_CullTransparentMesh: 0
+--- !u!1 &30056862
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 30056863}
+  - component: {fileID: 30056865}
+  - component: {fileID: 30056864}
+  m_Layer: 0
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &30056863
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30056862}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1266994773}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -646.5, y: -93}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &30056864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30056862}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.37952524, g: 0.3537736, b: 1, a: 0.56078434}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &30056865
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30056862}
+  m_CullTransparentMesh: 0
 --- !u!1 &74143763
 GameObject:
   m_ObjectHideFlags: 0
@@ -529,6 +601,296 @@ Transform:
   m_Father: {fileID: 183146948}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &287895066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 287895067}
+  - component: {fileID: 287895071}
+  - component: {fileID: 287895070}
+  - component: {fileID: 287895069}
+  - component: {fileID: 287895068}
+  m_Layer: 0
+  m_Name: Panel (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &287895067
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287895066}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1370272966}
+  m_Father: {fileID: 1620783689}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.049000002, y: 0.023000002}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: -29.933672, y: -130.36206}
+  m_SizeDelta: {x: -586.6326, y: -332.4759}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &287895068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287895066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourFullName: HoloForge.ActionTrigger
+  manager: {fileID: 0}
+  behaviourDefinitionRelativeFilePath: 
+  sceneOverridesRelativeFilePath: 
+  editorParametersJson: 
+  runtimeParametersJson: 
+  editorParameters:
+    behaviourName: HoloForge.ActionTrigger
+    entries:
+    - name: nbStates
+      serializedType: System.Int32
+      serializedValue: 0
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: stateBoolList
+      serializedType: System.Collections.Generic.List`1[[System.Boolean, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: '[]'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: stateTypeList
+      serializedType: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: '[]'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: stateNameList
+      serializedType: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: '[]'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: eventParameterList
+      serializedType: System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
+        HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: '[]'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: eventType
+      serializedType: System.String
+      serializedValue: HoloForge.ActionTriggerExtension.Event.EventGaze
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: eventParameter
+      serializedType: System.Collections.Generic.Dictionary`2[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
+        HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+      serializedValue: "[\r\n  {\r\n    \"Key\": \"eventType\",\r\n    \"Value\":
+        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeEventUser,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \     \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeEventUser,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::OnTap}\"\r\n
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"stateType\",\r\n    \"Value\": {\r\n
+        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeState, HSBaseBehaviours,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n      \"value\":
+        \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeState,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::None}\"\r\n
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"ComponentRights\",\r\n    \"Value\":
+        {\r\n      \"type\": \"Holo.ComponentRights, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null\",\r\n      \"value\": \"{HFUnityEditorSerializationMode::ENUM::Holo.ComponentRights,
+        HFHoloBaseImplementation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Everyone}\"\r\n
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"UseSnap\",\r\n    \"Value\": {\r\n
+        \     \"type\": \"System.Boolean\",\r\n      \"value\": \"True\"\r\n    }\r\n
+        \ },\r\n  {\r\n    \"Key\": \"GameObject\",\r\n    \"Value\": {\r\n      \"type\":
+        \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \     \"value\": \"{\\r\\n  \\\"unityGameObject\\\": \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::0}\\\"\\r\\n}\"\r\n
+        \   }\r\n  }\r\n]"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: nbCommands
+      serializedType: System.Int32
+      serializedValue: 2
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: actionBoolList
+      serializedType: System.Collections.Generic.List`1[[System.Boolean, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: "[\r\n  \"False\",\r\n  \"True\"\r\n]"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: actionTypeList
+      serializedType: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: "[\r\n  \"HoloForge.ActionTriggerExtension.Action.ActionObject\",\r\n
+        \ \"HoloForge.ActionTriggerExtension.Action.ActionObject\"\r\n]"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: actionParameterList
+      serializedType: System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
+        HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: "[\r\n  [\r\n    {\r\n      \"Key\": \"action\",\r\n      \"Value\":
+        {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.ObjectAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \       \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.ObjectAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::SetObjectActive}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"shared\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\": \"True\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
+        {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
+        \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::1}\\\"\\r\\n}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"setObjectActiveValue\",\r\n
+        \     \"Value\": {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\":
+        \"False\"\r\n      }\r\n    }\r\n  ],\r\n  [\r\n    {\r\n      \"Key\": \"action\",\r\n
+        \     \"Value\": {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.ObjectAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \       \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.ObjectAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::SetObjectActive}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"shared\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\": \"True\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
+        {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
+        \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::2}\\\"\\r\\n}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"setObjectActiveValue\",\r\n
+        \     \"Value\": {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\":
+        \"True\"\r\n      }\r\n    }\r\n  ]\r\n]"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: andValue
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: enableDebug
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: startAsDisable
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: target
+      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: NULL
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: enabled
+      serializedType: System.Boolean
+      serializedValue: True
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: OnBehaviourInitialized
+      serializedType: Holo.HoloAction, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      serializedValue: '{}'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: allBehavioursInitialized
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 287895068}
+      serializationMode: HFUnityEditorSerializationMode
+    components: []
+  runtimeParameters:
+    behaviourName: 
+    entries: []
+    components: []
+  attachedAssetId: 
+  originIsClient: 0
+  serializedGameObjects:
+  - {fileID: 287895066}
+  - {fileID: 1620783688}
+  - {fileID: 1266994769}
+  serializedComponents: []
+--- !u!65 &287895069
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287895066}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 572.7027, y: 114.8424, z: 13.214025}
+  m_Center: {x: 0.37841004, y: -0.51003695, z: 0.09233381}
+--- !u!114 &287895070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287895066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.049928807, g: 0.9622642, b: 0.8812454, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &287895071
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 287895066}
+  m_CullTransparentMesh: 0
 --- !u!1 &374193395
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +967,78 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 374193395}
+  m_CullTransparentMesh: 0
+--- !u!1 &401442266
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 401442267}
+  - component: {fileID: 401442269}
+  - component: {fileID: 401442268}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &401442267
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401442266}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 1620783689}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000015259, y: 69}
+  m_SizeDelta: {x: 106.17, y: 275.9}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &401442268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401442266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 43e36d1edb9c7c34c847ac17dddb4d2b, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &401442269
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 401442266}
   m_CullTransparentMesh: 0
 --- !u!1 &453716192
 GameObject:
@@ -756,6 +1190,79 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 489818908}
+  m_CullTransparentMesh: 0
+--- !u!1 &510062261
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 510062262}
+  - component: {fileID: 510062264}
+  - component: {fileID: 510062263}
+  m_Layer: 0
+  m_Name: Panel (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &510062262
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510062261}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 557803186}
+  m_Father: {fileID: 1620783689}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -52.8}
+  m_SizeDelta: {x: -646.5, y: -324.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &510062263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510062261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &510062264
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 510062261}
   m_CullTransparentMesh: 0
 --- !u!1 &516325492
 GameObject:
@@ -910,6 +1417,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 522270805}
+  m_CullTransparentMesh: 0
+--- !u!1 &557803185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 557803186}
+  - component: {fileID: 557803188}
+  - component: {fileID: 557803187}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &557803186
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557803185}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 510062262}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.5, y: 0}
+  m_SizeDelta: {x: 231.8, y: 64.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &557803187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557803185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "Regardez dans la direction souhait\xE9e et faites un V avec votre index
+    et votre majeur devant vous sans bouger durant 3 secondes"
+--- !u!222 &557803188
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 557803185}
   m_CullTransparentMesh: 0
 --- !u!1 &612866676
 GameObject:
@@ -1211,6 +1796,234 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 636094317}
   m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
+--- !u!1 &639246462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 639246463}
+  - component: {fileID: 639246465}
+  - component: {fileID: 639246464}
+  m_Layer: 0
+  m_Name: Panel (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &639246463
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639246462}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 683628653}
+  m_Father: {fileID: 1266994773}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -50.6}
+  m_SizeDelta: {x: -646.5, y: -320.4}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &639246464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639246462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &639246465
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 639246462}
+  m_CullTransparentMesh: 0
+--- !u!1 &650540202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 650540203}
+  - component: {fileID: 650540205}
+  - component: {fileID: 650540204}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &650540203
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650540202}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1568324070}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 241.5, y: 64.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &650540204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650540202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: J'ai compris
+--- !u!222 &650540205
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 650540202}
+  m_CullTransparentMesh: 0
+--- !u!1 &683628652
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 683628653}
+  - component: {fileID: 683628655}
+  - component: {fileID: 683628654}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &683628653
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683628652}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 639246463}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.5, y: 0}
+  m_SizeDelta: {x: 229.6, y: 64.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &683628654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683628652}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "S\xE9lectionnez un tableau de r\xE9f\xE9rence en vous mettant devant lui
+    et fixez-le du regard puis claquez des doigts devant vous"
+--- !u!222 &683628655
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683628652}
+  m_CullTransparentMesh: 0
 --- !u!1 &702489487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1670,7 +2483,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914026117}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
   m_Name: 
@@ -2822,6 +3635,108 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &1266994769
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1266994773}
+  - component: {fileID: 1266994772}
+  - component: {fileID: 1266994771}
+  - component: {fileID: 1266994770}
+  m_Layer: 5
+  m_Name: ChoixTableau
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1266994770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266994769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1266994771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266994769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1266994772
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266994769}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 74143765}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
+--- !u!224 &1266994773
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1266994769}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.003, y: 0.003, z: 0.003}
+  m_Children:
+  - {fileID: 30056863}
+  - {fileID: 639246463}
+  - {fileID: 1568324070}
+  - {fileID: 2070772163}
+  m_Father: {fileID: 1423236634}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1221, y: 460}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1277008160
 GameObject:
   m_ObjectHideFlags: 0
@@ -3525,6 +4440,83 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1361544495}
   m_CullTransparentMesh: 0
+--- !u!1 &1370272965
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1370272966}
+  - component: {fileID: 1370272968}
+  - component: {fileID: 1370272967}
+  m_Layer: 0
+  m_Name: Text
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1370272966
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370272965}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 287895067}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 241.5, y: 64.6}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1370272967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370272965}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 3
+    m_MaxSize: 40
+    m_Alignment: 4
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: J'ai compris
+--- !u!222 &1370272968
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1370272965}
+  m_CullTransparentMesh: 0
 --- !u!1 &1402870314
 GameObject:
   m_ObjectHideFlags: 0
@@ -3549,8 +4541,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1402870314}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.77, y: 0.68, z: 0}
+  m_LocalRotation: {x: -0, y: 0.31571952, z: -0, w: 0.94885254}
+  m_LocalPosition: {x: 2.299, y: 1.236, z: -1.829}
   m_LocalScale: {x: 0.25, y: 0.25, z: 0.25}
   m_Children:
   - {fileID: 1586455189}
@@ -3559,7 +4551,7 @@ Transform:
   - {fileID: 914026118}
   m_Father: {fileID: 0}
   m_RootOrder: 9
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 36.809002, z: 0}
 --- !u!114 &1402870316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4227,6 +5219,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1680723661}
+  - {fileID: 1620783689}
+  - {fileID: 1266994773}
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4509,7 +5503,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499578866}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
   m_Name: 
@@ -4633,6 +5627,374 @@ MonoBehaviour:
   serializedGameObjects:
   - {fileID: 1499578866}
   serializedComponents: []
+--- !u!1 &1568324069
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1568324070}
+  - component: {fileID: 1568324074}
+  - component: {fileID: 1568324073}
+  - component: {fileID: 1568324072}
+  - component: {fileID: 1568324071}
+  m_Layer: 0
+  m_Name: Panel (2)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1568324070
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568324069}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 650540203}
+  m_Father: {fileID: 1266994773}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -125.05}
+  m_SizeDelta: {x: -646.5, y: -343.1}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1568324071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568324069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourFullName: HoloForge.ActionTrigger
+  manager: {fileID: 0}
+  behaviourDefinitionRelativeFilePath: 
+  sceneOverridesRelativeFilePath: 
+  editorParametersJson: 
+  runtimeParametersJson: 
+  editorParameters:
+    behaviourName: HoloForge.ActionTrigger
+    entries:
+    - name: nbStates
+      serializedType: System.Int32
+      serializedValue: 0
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: stateBoolList
+      serializedType: System.Collections.Generic.List`1[[System.Boolean, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: '[]'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: stateTypeList
+      serializedType: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: '[]'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: stateNameList
+      serializedType: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: '[]'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: eventParameterList
+      serializedType: System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
+        HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: '[]'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: eventType
+      serializedType: System.String
+      serializedValue: HoloForge.ActionTriggerExtension.Event.EventGaze
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: eventParameter
+      serializedType: System.Collections.Generic.Dictionary`2[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
+        HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
+      serializedValue: "[\r\n  {\r\n    \"Key\": \"eventType\",\r\n    \"Value\":
+        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeEventUser,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \     \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeEventUser,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::OnTap}\"\r\n
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"stateType\",\r\n    \"Value\": {\r\n
+        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeState, HSBaseBehaviours,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n      \"value\":
+        \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeState,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::None}\"\r\n
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"ComponentRights\",\r\n    \"Value\":
+        {\r\n      \"type\": \"Holo.ComponentRights, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null\",\r\n      \"value\": \"{HFUnityEditorSerializationMode::ENUM::Holo.ComponentRights,
+        HFHoloBaseImplementation, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Everyone}\"\r\n
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"UseSnap\",\r\n    \"Value\": {\r\n
+        \     \"type\": \"System.Boolean\",\r\n      \"value\": \"True\"\r\n    }\r\n
+        \ },\r\n  {\r\n    \"Key\": \"GameObject\",\r\n    \"Value\": {\r\n      \"type\":
+        \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \     \"value\": \"{\\r\\n  \\\"unityGameObject\\\": \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::0}\\\"\\r\\n}\"\r\n
+        \   }\r\n  }\r\n]"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: nbCommands
+      serializedType: System.Int32
+      serializedValue: 2
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: actionBoolList
+      serializedType: System.Collections.Generic.List`1[[System.Boolean, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: "[\r\n  \"False\",\r\n  \"True\"\r\n]"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: actionTypeList
+      serializedType: System.Collections.Generic.List`1[[System.String, mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: "[\r\n  \"HoloForge.ActionTriggerExtension.Action.ActionObject\",\r\n
+        \ \"HoloForge.ActionTriggerExtension.Action.ActionScript\"\r\n]"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: actionParameterList
+      serializedType: System.Collections.Generic.List`1[[System.Collections.Generic.Dictionary`2[[System.String,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
+        HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
+      serializedValue: "[\r\n  [\r\n    {\r\n      \"Key\": \"action\",\r\n      \"Value\":
+        {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.ObjectAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \       \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.ObjectAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::SetObjectActive}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"shared\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\": \"True\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
+        {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
+        \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::1}\\\"\\r\\n}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"setObjectActiveValue\",\r\n
+        \     \"Value\": {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\":
+        \"False\"\r\n      }\r\n    }\r\n  ],\r\n  [\r\n    {\r\n      \"Key\": \"action\",\r\n
+        \     \"Value\": {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.ScriptAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \       \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.ScriptAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"shared\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\": \"True\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
+        {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
+        \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::2}\\\"\\r\\n}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"behaviourName\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.String\",\r\n        \"value\": \"ExperienceFlowManager\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"methodName\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.String\",\r\n        \"value\": \"StartFlow\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"parameters\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.Collections.Generic.Dictionary`2[[System.String,
+        mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
+        HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\",\r\n
+        \       \"value\": \"[]\"\r\n      }\r\n    }\r\n  ]\r\n]"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: andValue
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: enableDebug
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: startAsDisable
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: target
+      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: NULL
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: enabled
+      serializedType: System.Boolean
+      serializedValue: True
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: OnBehaviourInitialized
+      serializedType: Holo.HoloAction, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      serializedValue: '{}'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: allBehavioursInitialized
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1568324071}
+      serializationMode: HFUnityEditorSerializationMode
+    components: []
+  runtimeParameters:
+    behaviourName: 
+    entries: []
+    components: []
+  attachedAssetId: 
+  originIsClient: 0
+  serializedGameObjects:
+  - {fileID: 1568324069}
+  - {fileID: 1266994769}
+  - {fileID: 2076923305}
+  serializedComponents: []
+--- !u!65 &1568324072
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568324069}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 572.7027, y: 114.8424, z: 13.214025}
+  m_Center: {x: 0.37841004, y: -0.51003695, z: 0.09233381}
+--- !u!114 &1568324073
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568324069}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.049928807, g: 0.9622642, b: 0.8812454, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1568324074
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1568324069}
+  m_CullTransparentMesh: 0
+--- !u!1 &1581197377
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1581197378}
+  - component: {fileID: 1581197380}
+  - component: {fileID: 1581197379}
+  m_Layer: 0
+  m_Name: Panel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1581197378
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581197377}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1620783689}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: -646.5, y: -93}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1581197379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581197377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.37952524, g: 0.3537736, b: 1, a: 0.56078434}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1581197380
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581197377}
+  m_CullTransparentMesh: 0
 --- !u!1 &1586455188
 GameObject:
   m_ObjectHideFlags: 0
@@ -4734,7 +6096,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586455188}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
   m_Name: 
@@ -4930,6 +6292,108 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1592682310}
   m_CullTransparentMesh: 0
+--- !u!1 &1620783688
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1620783689}
+  - component: {fileID: 1620783692}
+  - component: {fileID: 1620783691}
+  - component: {fileID: 1620783690}
+  m_Layer: 5
+  m_Name: PrisePhoto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1620783689
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620783688}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.003, y: 0.003, z: 0.003}
+  m_Children:
+  - {fileID: 1581197378}
+  - {fileID: 510062262}
+  - {fileID: 287895067}
+  - {fileID: 401442267}
+  m_Father: {fileID: 1423236634}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 1221, y: 460}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1620783690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620783688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1301386320, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1620783691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620783688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 0
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 800, y: 600}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1620783692
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620783688}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 2
+  m_Camera: {fileID: 74143765}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 0
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1655693154
 GameObject:
   m_ObjectHideFlags: 0
@@ -6300,6 +7764,78 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1998992524}
   m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
+--- !u!1 &2070772162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2070772163}
+  - component: {fileID: 2070772165}
+  - component: {fileID: 2070772164}
+  m_Layer: 0
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2070772163
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070772162}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1266994773}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -0.000011444, y: 69}
+  m_SizeDelta: {x: 113.5, y: 119.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2070772164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070772162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 69378ccc5f2bcf94e9b5683dd135002e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &2070772165
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2070772162}
+  m_CullTransparentMesh: 0
 --- !u!1 &2076923305
 GameObject:
   m_ObjectHideFlags: 0
@@ -6341,14 +7877,14 @@ MonoBehaviour:
     - name: firstXpTuto
       serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::2}\"\r\n}"
+      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::5}\"\r\n}"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 2076923306}
       serializationMode: HFUnityEditorSerializationMode
-    - name: firstXpTutoQuitButton
+    - name: firstXpTuto2
       serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::3}\"\r\n}"
+      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::6}\"\r\n}"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 2076923306}
       serializationMode: HFUnityEditorSerializationMode
@@ -6611,6 +8147,8 @@ MonoBehaviour:
   - {fileID: 1680723660}
   - {fileID: 1421947229}
   - {fileID: 1773775813}
+  - {fileID: 1620783688}
+  - {fileID: 1266994769}
   serializedComponents: []
 --- !u!4 &2076923307
 Transform:
@@ -7124,7 +8662,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141544202}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
   m_Name: 

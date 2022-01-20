@@ -10,8 +10,7 @@ public class ExperienceFlowManager : HoloBehaviour
     public GazeComponent gazeComponent;
 
     public HoloGameObject firstXpTuto;
-    public HoloGameObject firstXpTutoQuitButton;
-    private GazeComponent firstXpTutoQuitButtonGazeComponent;
+    public HoloGameObject firstXpTuto2;
     public HoloGameObject firstXpGestureManager;
     private PhotoCaptureBehaviour firstXpBehaviour;
 
@@ -32,6 +31,9 @@ public class ExperienceFlowManager : HoloBehaviour
         firstXpTuto.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
         firstXpTuto.transform.position.y = HoloCamera.mainCamera.transform.position.y;
         firstXpTuto.SetActive(true);
+
+        firstXpTuto2.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
+        firstXpTuto2.transform.position.y = HoloCamera.mainCamera.transform.position.y;
     }
 
 
