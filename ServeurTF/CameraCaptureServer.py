@@ -14,9 +14,9 @@ class CameraCaptureTestServer(http.server.SimpleHTTPRequestHandler):
 
     def do_PUT(self):
         
-        print("SELF.PATH : " + self.path)
+        #filename_prov contains "style choice" + "$" + "file name"
         filename_prov = self.path[1:]
-        print ("FILENAME :" + filename_prov)
+        #Separate style choice and file name
         res = filename_prov.split("$")
         stylechoice = res[0]
         print ("STYLECHOICE : " + stylechoice)
@@ -26,13 +26,17 @@ class CameraCaptureTestServer(http.server.SimpleHTTPRequestHandler):
         data = self.rfile.read(length)
         path= f'{os.getcwd()}/files/{filename}'
         print("PUT "+path)
+        #Write the data in the right file
         with open(path, 'wb') as file:
                 file.write(data)
+        #Open the image corresponding to the file
         imagepng = Image.open(path)
+        #Compression to make the image less heavy -> style transfer is faster
         imagejpg = imagepng.convert('RGB')
         w, h = imagejpg.size
         imageComp=imagejpg.resize((int(w/4),int(h/4)))
         imageComp.save("files/content.jpg")
+        #Following line launch the style transfer of the current image with the style we chose
         subprocess.run([sys.executable, "neural_style.py", "eval", \
                     "--content-image", "files/content.jpg", \
                     "--model", "saved_models/" + stylechoice + ".pth", \
@@ -48,6 +52,7 @@ class CameraCaptureTestServer(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
 
     def do_GET(self):
+        #Select the stylized image 
         filename = self.path[1:]
         path= f'{os.getcwd()}/files/output_image/result.jpg'
         print("GET "+path)
