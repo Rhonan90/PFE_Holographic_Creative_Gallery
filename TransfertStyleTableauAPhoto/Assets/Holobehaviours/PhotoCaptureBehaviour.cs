@@ -47,6 +47,14 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
     bool inProgress = false;
 
+    public HoloAudioSource sonIntro;
+    public HoloAudioSource sonPhoto;
+    public HoloAudioSource sonTableau;
+    public HoloAudioSource sonRésultat;
+    public HoloAudioSource sonPrisePhoto;
+    public HoloAudioSource sonTransformationImage;
+
+
     public override void Start()
     {
         //gazeComponent.OnGazeEvent += OnGazeEvent;
@@ -189,6 +197,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         UpdateLabel("Taking picture, don't move");
         inProgress = true;
         ShowLabelUi();
+        sonPrisePhoto.enabled = true;
         photoCaptureComponent.TakePicture(OnPhotoTaken);
     }
 
@@ -234,6 +243,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
             temp.GetHoloElement<HoloImage>().SetFile(path);
             
         });
+        sonPrisePhoto.enabled = false;
         inProgress = false;
 
     }
@@ -291,6 +301,8 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                         Log("Texture loaded " + _width + "x" + _height);
                         UpdateLabel("Done!");
                         LabelUI.SetActive(false);
+                        HoloCoroutine.StartCoroutine(PlayTransformSoundCoroutine);
+                        HoloCoroutine.StartCoroutine(PlayInstructionEndCoroutine);
                     }
                     inProgress = false;
                 });
@@ -300,6 +312,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                 Error("Could not send file " + url);
                 UpdateLabel("Failed to upload");
                 inProgress = false;
+                HoloCoroutine.StartCoroutine(HideLabelAfterTimeCoroutine);
             }
         });
     }
@@ -375,5 +388,28 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     {
         yield return HoloCoroutine.WaitForSeconds(3);
         LabelUI.SetActive(false);
+    }
+
+    public IEnumerator VocalInstructionsCoroutine()
+    {
+        sonIntro.enabled = true;
+        yield return HoloCoroutine.WaitForSeconds(5);
+        sonPhoto.enabled = true;
+        yield return HoloCoroutine.WaitUntil(() => (chosenPhotoIndex!=null));
+        sonTableau.enabled = true;
+        yield return HoloCoroutine.WaitUntil(() => (styleIndex != null));
+    }
+
+    IEnumerator PlayTransformSoundCoroutine()
+    {
+        sonTransformationImage.enabled = true;
+        yield return HoloCoroutine.WaitForSeconds(2);
+        sonTransformationImage.enabled = false;
+    }
+
+    IEnumerator PlayInstructionEndCoroutine()
+    {
+        yield return HoloCoroutine.WaitForSeconds(2);
+        sonRésultat.enabled = true;
     }
 }

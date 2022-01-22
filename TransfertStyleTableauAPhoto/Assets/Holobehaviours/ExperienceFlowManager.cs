@@ -20,6 +20,9 @@ public class ExperienceFlowManager : HoloBehaviour
     private bool firstXP = false;
     private bool xpStarted = false;
 
+    public HoloAudioSource sonDébut;
+
+
     public override void Start()
     {
         gestureComp.RegisterPose(HandPose.HandFaceToEachOther);
@@ -27,13 +30,9 @@ public class ExperienceFlowManager : HoloBehaviour
         firstXpBehaviour = (PhotoCaptureBehaviour) firstXpGestureManager.GetBehaviour("PhotoCaptureBehaviour");
         secondXpBehaviour = (HoloRoomChange) secondXpGestureManager.GetBehaviour("HoloRoomChange");
 
+        sonDébut.enabled = true;
+        HoloCoroutine.StartCoroutine(StartAfterIntroCoroutine);
 
-        firstXpTuto.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
-        firstXpTuto.transform.position.y = HoloCamera.mainCamera.transform.position.y;
-        firstXpTuto.SetActive(true);
-
-        firstXpTuto2.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
-        firstXpTuto2.transform.position.y = HoloCamera.mainCamera.transform.position.y;
     }
 
 
@@ -43,6 +42,7 @@ public class ExperienceFlowManager : HoloBehaviour
         firstXP = true;
         firstXpBehaviour.StartXp();
         firstXpTuto.SetActive(false);
+        HoloCoroutine.StartCoroutine(firstXpBehaviour.VocalInstructionsCoroutine);
     }
 
     private void OnPoseStarted(HandPose handPose, Handness handness)
@@ -65,4 +65,14 @@ public class ExperienceFlowManager : HoloBehaviour
         }
     }
 
+    IEnumerator StartAfterIntroCoroutine()
+    {
+        yield return HoloCoroutine.WaitForSeconds(2.5f);
+        firstXpTuto.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
+        firstXpTuto.transform.position.y = HoloCamera.mainCamera.transform.position.y;
+        firstXpTuto.SetActive(true);
+
+        firstXpTuto2.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
+        firstXpTuto2.transform.position.y = HoloCamera.mainCamera.transform.position.y;
+    }
 }
