@@ -19,7 +19,6 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     public List<HoloGameObject> toileHolders;
     private int currIndexToile = 0;
     public HoloGameObject LabelUI;
-    public HoloGameObject StyleChoice;
     public HoloGameObject Chevalet;
     private HoloQuaternion chevaletInitialRotation;
     public HoloGameObject photoViewer;
@@ -40,10 +39,14 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     private List<string> photosPath;     //path des photos prises pour y accéder/les supprimer
     private List<HoloGameObject> photos;    //photos prises et affichées disponibles à la sélection
     private List<HoloGameObject> transformedPhotos;     //photos transformées récupérées depuis le serveur
+
+
     private int? chosenPhotoIndex = null;
+    public int maxPhotos = 4;
+    private int _currentPhotoPath = 0;
     
     private int? styleIndex; //?? not sure yet if int is the best indicator, mb style name better ?
-    private string[] styles = { "mosaic", "rain-princess", "candy", "scream" };
+    private string[] styles = { "mosaic", "rain_princess", "candy", "scream" };
 
     bool inProgress = false;
 
@@ -53,6 +56,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     public HoloAudioSource sonRésultat;
     public HoloAudioSource sonPrisePhoto;
     public HoloAudioSource sonTransformationImage;
+    public HoloAudioSource sonChoixStyle;
 
 
     public override void Start()
@@ -64,8 +68,6 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         gestureComp.RegisterPose(HandPose.HandOpenedGround);
         gestureComp.OnPoseStart += OnposeStarted;
 
-
-
         //camera = camera.FindInScene("Camera");
 
         gazeComponents = new List<GazeComponent>();
@@ -73,7 +75,22 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         photos = new List<HoloGameObject>();
         transformedPhotos = new List<HoloGameObject>();
 
-        //Interaction choix de style 
+        InitializeGazeComponents();
+
+        timer = new Timer(2,() => { canGesture = true; });
+        timer.Start();
+        canGesture = false;
+
+        chevaletInitialRotation = Chevalet.transform.rotation;
+
+        for (int i = 0; i < toileHolders.Count; i++)
+        {
+            HandlerHelper.SetHandlerEditable(toileHolders[i],true);
+        }
+    }
+
+    private void InitializeGazeComponents()
+    {
         tableau1GazeComponent = Engine.AddHoloComponent<GazeComponent>(nameof(tableau1GazeComponent));
         tableau1GazeComponent.attribute.GameObject = tableau1;
         tableau1GazeComponent.attribute.UseSnap = true;
@@ -97,22 +114,6 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         tableau4GazeComponent.attribute.UseSnap = true;
         tableau4GazeComponent.OnGazeEvent += ScanGazeComponent_OnGazeEvent;
         gazeComponents.Add(tableau4GazeComponent);
-
-        timer = new Timer(2,() => { canGesture = true; });
-        timer.Start();
-        canGesture = false;
-
-        chevaletInitialRotation = Chevalet.transform.rotation;
-
-        for (int i = 0; i < toileHolders.Count; i++)
-        {
-            HandlerHelper.SetHandlerEditable(toileHolders[i],true);
-        }
-    }
-
-    public override void OnDestroy()
-    {
-        //gazeComponent.OnGazeEvent -= OnGazeEvent;
     }
 
     private void ScanGazeComponent_OnGazeEvent(GazeComponent _component, GazeEvent _event)
@@ -124,8 +125,24 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                 if (_component == gazeComponents[i])
                 {
                     styleIndex = i;
-                    //StyleChoice.SetActive(false);
-                    //inProgress = false;
+
+                    if (inProgress)
+                    {
+                        Log("Already in progress");
+                        return;
+                    }
+                    if (chosenPhotoIndex == null)
+                    {
+                        Log("No photo taken yet");
+                        return;
+                    }
+                    if (styleIndex == null)
+                    {
+                        Log("No style chosen yet");
+                        return;
+                    }
+                    sonChoixStyle.enabled = true;
+                    SendPhotoToServer(chosenPhotoIndex.Value, styleIndex.Value);
                 }
             }
         }
@@ -136,46 +153,6 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     {
         if (xpActivated && canGesture)
         {
-            if (handPose == HandPose.HandOpenedSky)
-            {
-                if (inProgress)
-                {
-                    Log("Already in progress");
-                    return;
-                }
-                //StyleChoice.SetActive(true);
-                //StyleChoice.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
-                //StyleChoice.transform.rotation = HoloCamera.mainCamera.transform.rotation;
-                //inProgress = true;
-
-                //timer.Start();
-                //canGesture = false;
-            }
-
-            if (handPose == HandPose.HandOpenedGround)
-            {
-                if (inProgress)
-                {
-                    Log("Already in progress");
-                    return;
-                }
-                if (chosenPhotoIndex == null)
-                {
-                    Log("No photo taken yet");
-                    return;
-                }
-                if (styleIndex == null)
-                {
-                    Log("No style chosen yet");
-                    return;
-                }
-                SendPhotoToServer(chosenPhotoIndex.Value, styleIndex.Value);
-
-
-                timer.Start();
-                canGesture = false;
-            }
-
             if (handPose == HandPose.TwoFingerUp)
             {
                 if (inProgress)
@@ -211,11 +188,12 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         }
 
 
-        string filename = "Photo_" + _id + ".png";
+        string filename = "Photo_" + _currentPhotoPath + ".png";
         string path = PathHelper.Combine(PathHelper.GetPersistentDataPath(), filename);
         //Log("path to save = " + path);
         photosPath.Add(path);
-        chosenPhotoIndex = photosPath.Count - 1;
+        chosenPhotoIndex = photosPath.FindIndex(0,(str) => (str==path));
+        _currentPhotoPath = (_currentPhotoPath + 1) % maxPhotos;
 
         UpdateLabel("Saving photo");
 
@@ -233,14 +211,21 @@ public class PhotoCaptureBehaviour : HoloBehaviour
             LabelUI.SetActive(false);
             picture.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(path);
             picture.SetActive(true);
-            
 
 
-            HoloGameObject temp = imagePrefab.Duplicate(imagePrefab.transform.position,photoViewer,chosenPhotoIndex.Value.ToString());
-            photos.Add(temp);
+            if (photos.Count < maxPhotos)
+            {
+                HoloGameObject temp = imagePrefab.Duplicate(imagePrefab.transform.position, photoViewer, chosenPhotoIndex.Value.ToString());
+                photos.Add(temp);
+                temp.GetHoloElement<HoloImage>().SetFile(path);
+                temp.SetActive(true);
+            }
+            else
+            {
+                photos[_currentPhotoPath].GetHoloElement<HoloImage>().SetFile(path);
+            }
             SelectPicture(chosenPhotoIndex.Value);
-            temp.SetActive(true);
-            temp.GetHoloElement<HoloImage>().SetFile(path);
+
             
         });
         sonPrisePhoto.enabled = false;
@@ -315,6 +300,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                 HoloCoroutine.StartCoroutine(HideLabelAfterTimeCoroutine);
             }
         });
+        sonChoixStyle.enabled = false;
     }
 
 
@@ -327,7 +313,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     void ShowLabelUi()
     {
         LabelUI.SetActive(true);
-        LabelUI.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
+        LabelUI.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 2.5f;
     }
 
     public void StartXp()
@@ -339,14 +325,16 @@ public class PhotoCaptureBehaviour : HoloBehaviour
             picture.SetActive(true);
         }
         SetActiveTransformedPhotos(true);
-        StyleChoice.SetActive(true);
+        //StyleChoice.SetActive(true);
+        SetActiveTableaux(true);
     }
 
     public void EndXp()
     {
         xpActivated = false;
         LabelUI.SetActive(false);
-        StyleChoice.SetActive(false);
+        //StyleChoice.SetActive(false);
+        SetActiveTableaux(false);
         picture.SetActive(false);
         Chevalet.SetActive(false);
         SetActiveTransformedPhotos(false);
@@ -411,5 +399,13 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     {
         yield return HoloCoroutine.WaitForSeconds(2);
         sonRésultat.enabled = true;
+    }
+
+    private void SetActiveTableaux(bool _bool)
+    {
+        for (int i = 0; i < gazeComponents.Count; i++)
+        {
+            gazeComponents[i].GameObject.SetActive(_bool);
+        }
     }
 }

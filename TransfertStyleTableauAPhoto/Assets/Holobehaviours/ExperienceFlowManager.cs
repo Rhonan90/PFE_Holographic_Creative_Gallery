@@ -32,7 +32,6 @@ public class ExperienceFlowManager : HoloBehaviour
 
         sonDébut.enabled = true;
         HoloCoroutine.StartCoroutine(StartAfterIntroCoroutine);
-
     }
 
 
@@ -41,7 +40,7 @@ public class ExperienceFlowManager : HoloBehaviour
         xpStarted = true;
         firstXP = true;
         firstXpBehaviour.StartXp();
-        firstXpTuto.SetActive(false);
+        firstXpTuto2.SetActive(false);
         HoloCoroutine.StartCoroutine(firstXpBehaviour.VocalInstructionsCoroutine);
     }
 
@@ -74,5 +73,10 @@ public class ExperienceFlowManager : HoloBehaviour
 
         firstXpTuto2.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
         firstXpTuto2.transform.position.y = HoloCamera.mainCamera.transform.position.y;
+    }
+
+    public void HideFirstTuto()
+    {
+        firstXpTuto.SetActive(false);
     }
 }
