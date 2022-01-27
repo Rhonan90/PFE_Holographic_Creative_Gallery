@@ -214,17 +214,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 30056862}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7625, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1266994773}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -646.5, y: -93}
+  m_AnchoredPosition: {x: 1.5, y: 0}
+  m_SizeDelta: {x: -829.80005, y: -93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &30056864
 MonoBehaviour:
@@ -302,7 +302,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 085e89e6b1573e24fbbe87252289fc0a, type: 3}
+  m_audioClip: {fileID: 8300000, guid: defade2735fa4b744b7a4f249b2203f1, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -819,7 +819,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 0a3e71b99d7236e4eaeae66a12a516c3, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 41df016701c3c5642b54cdc4190a071b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1009,18 +1009,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287895066}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1370272966}
   m_Father: {fileID: 1620783689}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.049000002, y: 0.023000002}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -29.933672, y: -130.36206}
-  m_SizeDelta: {x: -586.6326, y: -332.4759}
+  m_AnchoredPosition: {x: -28.800064, y: -162.6}
+  m_SizeDelta: {x: -861.7999, y: -396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &287895068
 MonoBehaviour:
@@ -1081,7 +1081,7 @@ MonoBehaviour:
       serializationMode: HFUnityEditorSerializationMode
     - name: eventType
       serializedType: System.String
-      serializedValue: HoloForge.ActionTriggerExtension.Event.EventGaze
+      serializedValue: HoloForge.ActionTriggerExtension.Event.EventTouch
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 287895068}
       serializationMode: HFUnityEditorSerializationMode
@@ -1090,14 +1090,14 @@ MonoBehaviour:
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
       serializedValue: "[\r\n  {\r\n    \"Key\": \"eventType\",\r\n    \"Value\":
-        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeEventUser,
+        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchEvent,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
-        \     \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeEventUser,
-        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::OnTap}\"\r\n
+        \     \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchEvent,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::OnTouchEnter}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"stateType\",\r\n    \"Value\": {\r\n
-        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeState, HSBaseBehaviours,
+        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchState, HSBaseBehaviours,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n      \"value\":
-        \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeState,
+        \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchState,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::None}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"ComponentRights\",\r\n    \"Value\":
         {\r\n      \"type\": \"Holo.ComponentRights, HFHoloBaseImplementation, Version=0.0.0.0,
@@ -1108,7 +1108,13 @@ MonoBehaviour:
         \ },\r\n  {\r\n    \"Key\": \"GameObject\",\r\n    \"Value\": {\r\n      \"type\":
         \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
         \     \"value\": \"{\\r\\n  \\\"unityGameObject\\\": \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::0}\\\"\\r\\n}\"\r\n
-        \   }\r\n  }\r\n]"
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"hand\",\r\n    \"Value\": {\r\n      \"type\":
+        \"Holo.Handness, HFGesturesComponent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \     \"value\": \"{HFUnityEditorSerializationMode::ENUM::Holo.Handness, HFGesturesComponent,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Any}\"\r\n    }\r\n
+        \ },\r\n  {\r\n    \"Key\": \"MaxTouchDistance\",\r\n    \"Value\": {\r\n
+        \     \"type\": \"System.Single\",\r\n      \"value\": \"0\"\r\n    }\r\n
+        \ }\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 287895068}
       serializationMode: HFUnityEditorSerializationMode
@@ -1121,15 +1127,15 @@ MonoBehaviour:
     - name: actionBoolList
       serializedType: System.Collections.Generic.List`1[[System.Boolean, mscorlib,
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-      serializedValue: "[\r\n  \"True\",\r\n  \"False\"\r\n]"
+      serializedValue: "[\r\n  \"False\",\r\n  \"True\"\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 287895068}
       serializationMode: HFUnityEditorSerializationMode
     - name: actionTypeList
       serializedType: System.Collections.Generic.List`1[[System.String, mscorlib,
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-      serializedValue: "[\r\n  \"HoloForge.ActionTriggerExtension.Action.ActionScript\",\r\n
-        \ \"HoloForge.ActionTriggerExtension.Action.ActionObject\"\r\n]"
+      serializedValue: "[\r\n  \"HoloForge.ActionTriggerExtension.Action.ActionAudio\",\r\n
+        \ \"HoloForge.ActionTriggerExtension.Action.ActionScript\"\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 287895068}
       serializationMode: HFUnityEditorSerializationMode
@@ -1139,7 +1145,18 @@ MonoBehaviour:
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
       serializedValue: "[\r\n  [\r\n    {\r\n      \"Key\": \"action\",\r\n      \"Value\":
-        {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.ScriptAction,
+        {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.AudioAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \       \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.AudioAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Play}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"shared\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\": \"True\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
+        {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
+        \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::4}\\\"\\r\\n}\"\r\n
+        \     }\r\n    }\r\n  ],\r\n  [\r\n    {\r\n      \"Key\": \"action\",\r\n
+        \     \"Value\": {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.ScriptAction,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
         \       \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.ScriptAction,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute}\"\r\n
@@ -1149,30 +1166,19 @@ MonoBehaviour:
         {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
         \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::3}\\\"\\r\\n}\"\r\n
-        \     }\r\n    },\r\n    {\r\n      \"Key\": \"setObjectActiveValue\",\r\n
-        \     \"Value\": {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\":
-        \"False\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\": \"behaviourName\",\r\n
-        \     \"Value\": {\r\n        \"type\": \"System.String\",\r\n        \"value\":
-        \"ExperienceFlowManager\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
-        \"methodName\",\r\n      \"Value\": {\r\n        \"type\": \"System.String\",\r\n
-        \       \"value\": \"HideFirstTuto\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
-        \"parameters\",\r\n      \"Value\": {\r\n        \"type\": \"System.Collections.Generic.Dictionary`2[[System.String,
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"behaviourName\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.String\",\r\n        \"value\": \"ExperienceFlowManager\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"methodName\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.String\",\r\n        \"value\": \"StartFlow\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"parameters\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.Collections.Generic.Dictionary`2[[System.String,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\",\r\n
-        \       \"value\": \"[]\"\r\n      }\r\n    }\r\n  ],\r\n  [\r\n    {\r\n
-        \     \"Key\": \"action\",\r\n      \"Value\": {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.ObjectAction,
-        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
-        \       \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.ObjectAction,
-        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::SetObjectActive}\"\r\n
-        \     }\r\n    },\r\n    {\r\n      \"Key\": \"shared\",\r\n      \"Value\":
-        {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\": \"True\"\r\n
-        \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
-        {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
-        \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::2}\\\"\\r\\n}\"\r\n
-        \     }\r\n    },\r\n    {\r\n      \"Key\": \"setObjectActiveValue\",\r\n
-        \     \"Value\": {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\":
-        \"True\"\r\n      }\r\n    }\r\n  ]\r\n]"
+        \       \"value\": \"[\\r\\n  {\\r\\n    \\\"Key\\\": \\\"tuto\\\",\\r\\n
+        \   \\\"Value\\\": {\\r\\n      \\\"type\\\": \\\"Holo.HoloGameObject, HFHoloManager,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\\\",\\r\\n      \\\"value\\\":
+        \\\"{\\\\r\\\\n  \\\\\\\"unityGameObject\\\\\\\": \\\\\\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::1}\\\\\\\"\\\\r\\\\n}\\\"\\r\\n
+        \   }\\r\\n  }\\r\\n]\"\r\n      }\r\n    }\r\n  ]\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 287895068}
       serializationMode: HFUnityEditorSerializationMode
@@ -1262,7 +1268,7 @@ MonoBehaviour:
       serializationMode: HFRuntimeSerializationMode
     - name: eventType
       serializedType: System.String
-      serializedValue: HoloForge.ActionTriggerExtension.Event.EventGaze
+      serializedValue: HoloForge.ActionTriggerExtension.Event.EventTouch
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 287895068}
       serializationMode: HFRuntimeSerializationMode
@@ -1271,14 +1277,14 @@ MonoBehaviour:
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
       serializedValue: "[\r\n  {\r\n    \"Key\": \"eventType\",\r\n    \"Value\":
-        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeEventUser,
+        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchEvent,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
-        \     \"value\": \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeEventUser,
-        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::101}\"\r\n
+        \     \"value\": \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchEvent,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::1}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"stateType\",\r\n    \"Value\": {\r\n
-        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeState, HSBaseBehaviours,
+        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchState, HSBaseBehaviours,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n      \"value\":
-        \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeState,
+        \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchState,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"ComponentRights\",\r\n    \"Value\":
         {\r\n      \"type\": \"Holo.ComponentRights, HFHoloBaseImplementation, Version=0.0.0.0,
@@ -1289,7 +1295,12 @@ MonoBehaviour:
         \ },\r\n  {\r\n    \"Key\": \"GameObject\",\r\n    \"Value\": {\r\n      \"type\":
         \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
         \     \"value\": \"{\\r\\n  \\\"unityGameObject\\\": \\\"{HFRuntimeSerializationMode::GameObject::0::CURRENT_GAMEOBJECT::}\\\"\\r\\n}\"\r\n
-        \   }\r\n  }\r\n]"
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"hand\",\r\n    \"Value\": {\r\n      \"type\":
+        \"Holo.Handness, HFGesturesComponent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \     \"value\": \"{HFRuntimeSerializationMode::ENUM::Holo.Handness, HFGesturesComponent,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::7}\"\r\n    }\r\n  },\r\n
+        \ {\r\n    \"Key\": \"MaxTouchDistance\",\r\n    \"Value\": {\r\n      \"type\":
+        \"System.Single\",\r\n      \"value\": \"0\"\r\n    }\r\n  }\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 287895068}
       serializationMode: HFRuntimeSerializationMode
@@ -1302,15 +1313,15 @@ MonoBehaviour:
     - name: actionBoolList
       serializedType: System.Collections.Generic.List`1[[System.Boolean, mscorlib,
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-      serializedValue: "[\r\n  \"True\",\r\n  \"False\"\r\n]"
+      serializedValue: "[\r\n  \"False\",\r\n  \"True\"\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 287895068}
       serializationMode: HFRuntimeSerializationMode
     - name: actionTypeList
       serializedType: System.Collections.Generic.List`1[[System.String, mscorlib,
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-      serializedValue: "[\r\n  \"HoloForge.ActionTriggerExtension.Action.ActionScript\",\r\n
-        \ \"HoloForge.ActionTriggerExtension.Action.ActionObject\"\r\n]"
+      serializedValue: "[\r\n  \"HoloForge.ActionTriggerExtension.Action.ActionAudio\",\r\n
+        \ \"HoloForge.ActionTriggerExtension.Action.ActionScript\"\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 287895068}
       serializationMode: HFRuntimeSerializationMode
@@ -1320,7 +1331,18 @@ MonoBehaviour:
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
       serializedValue: "[\r\n  [\r\n    {\r\n      \"Key\": \"action\",\r\n      \"Value\":
-        {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.ScriptAction,
+        {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.AudioAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \       \"value\": \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.AudioAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::201}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"shared\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\": \"True\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
+        {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
+        \\\"{HFRuntimeSerializationMode::GameObject::0::../../../Sounds/styleChoisi::}\\\"\\r\\n}\"\r\n
+        \     }\r\n    }\r\n  ],\r\n  [\r\n    {\r\n      \"Key\": \"action\",\r\n
+        \     \"Value\": {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.ScriptAction,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
         \       \"value\": \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.ScriptAction,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::201}\"\r\n
@@ -1330,30 +1352,19 @@ MonoBehaviour:
         {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
         \\\"{HFRuntimeSerializationMode::GameObject::0::../../../ExperienceFlowManager::}\\\"\\r\\n}\"\r\n
-        \     }\r\n    },\r\n    {\r\n      \"Key\": \"setObjectActiveValue\",\r\n
-        \     \"Value\": {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\":
-        \"False\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\": \"behaviourName\",\r\n
-        \     \"Value\": {\r\n        \"type\": \"System.String\",\r\n        \"value\":
-        \"ExperienceFlowManager\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
-        \"methodName\",\r\n      \"Value\": {\r\n        \"type\": \"System.String\",\r\n
-        \       \"value\": \"HideFirstTuto\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
-        \"parameters\",\r\n      \"Value\": {\r\n        \"type\": \"System.Collections.Generic.Dictionary`2[[System.String,
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"behaviourName\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.String\",\r\n        \"value\": \"ExperienceFlowManager\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"methodName\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.String\",\r\n        \"value\": \"StartFlow\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"parameters\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.Collections.Generic.Dictionary`2[[System.String,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\",\r\n
-        \       \"value\": \"[]\"\r\n      }\r\n    }\r\n  ],\r\n  [\r\n    {\r\n
-        \     \"Key\": \"action\",\r\n      \"Value\": {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.ObjectAction,
-        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
-        \       \"value\": \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.ObjectAction,
-        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::201}\"\r\n
-        \     }\r\n    },\r\n    {\r\n      \"Key\": \"shared\",\r\n      \"Value\":
-        {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\": \"True\"\r\n
-        \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
-        {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
-        \\\"{HFRuntimeSerializationMode::GameObject::0::../../ChoixTableau::}\\\"\\r\\n}\"\r\n
-        \     }\r\n    },\r\n    {\r\n      \"Key\": \"setObjectActiveValue\",\r\n
-        \     \"Value\": {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\":
-        \"True\"\r\n      }\r\n    }\r\n  ]\r\n]"
+        \       \"value\": \"[\\r\\n  {\\r\\n    \\\"Key\\\": \\\"tuto\\\",\\r\\n
+        \   \\\"Value\\\": {\\r\\n      \\\"type\\\": \\\"Holo.HoloGameObject, HFHoloManager,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\\\",\\r\\n      \\\"value\\\":
+        \\\"{\\\\r\\\\n  \\\\\\\"unityGameObject\\\\\\\": \\\\\\\"{HFRuntimeSerializationMode::GameObject::0::..::}\\\\\\\"\\\\r\\\\n}\\\"\\r\\n
+        \   }\\r\\n  }\\r\\n]\"\r\n      }\r\n    }\r\n  ]\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 287895068}
       serializationMode: HFRuntimeSerializationMode
@@ -1409,6 +1420,7 @@ MonoBehaviour:
   - {fileID: 1620783688}
   - {fileID: 1266994769}
   - {fileID: 2076923305}
+  - {fileID: 1967081860}
   serializedComponents: []
 --- !u!65 &287895069
 BoxCollider:
@@ -1421,8 +1433,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 572.7027, y: 114.8424, z: 13.214025}
-  m_Center: {x: 0.37841004, y: -0.51003695, z: 0.09233381}
+  m_Size: {x: 310.92978, y: 65.45199, z: 36.565636}
+  m_Center: {x: 0.86766475, y: -1.5163682, z: 1.8248781}
 --- !u!114 &287895070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1458,6 +1470,363 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 287895066}
   m_CullTransparentMesh: 0
+--- !u!1 &308175870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 308175871}
+  - component: {fileID: 308175873}
+  - component: {fileID: 308175872}
+  m_Layer: 0
+  m_Name: ToileSubstitute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &308175871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308175870}
+  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
+  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
+  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
+  m_Children: []
+  m_Father: {fileID: 1786093160}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &308175872
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308175870}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &308175873
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 308175870}
+  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
+--- !u!1 &339376906
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 339376909}
+  - component: {fileID: 339376908}
+  - component: {fileID: 339376907}
+  m_Layer: 0
+  m_Name: Toile 3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &339376907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339376906}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1529183, y: 0.7122259, z: 0.21828628}
+  m_Center: {x: 0.03772056, y: 1.1831546, z: 0.27145988}
+--- !u!114 &339376908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339376906}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourFullName: TransformedImageHandlerBehaviour
+  manager: {fileID: 0}
+  behaviourDefinitionRelativeFilePath: 
+  sceneOverridesRelativeFilePath: 
+  editorParametersJson: 
+  runtimeParametersJson: 
+  editorParameters:
+    behaviourName: TransformedImageHandlerBehaviour
+    entries: []
+    components: []
+  runtimeParameters:
+    behaviourName: TransformedImageHandlerBehaviour
+    entries: []
+    components: []
+  attachedAssetId: 
+  originIsClient: 0
+  serializedGameObjects: []
+  serializedComponents: []
+--- !u!4 &339376909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 339376906}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 82, z: 0}
+  m_LocalScale: {x: 0.6666666, y: 0.6666666, z: 0.6666666}
+  m_Children:
+  - {fileID: 1935435345}
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &342425747
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 342425748}
+  - component: {fileID: 342425749}
+  m_Layer: 0
+  m_Name: autreChoix
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &342425748
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342425747}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2073261397}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &342425749
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 342425747}
+  m_Enabled: 0
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: adbf6fabe61cbda4dab74561c30347ac, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!1 &360647656
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 360647657}
+  - component: {fileID: 360647659}
+  - component: {fileID: 360647658}
+  m_Layer: 0
+  m_Name: ToileSubstitute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &360647657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360647656}
+  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
+  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
+  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
+  m_Children: []
+  m_Father: {fileID: 908956117}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &360647658
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360647656}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &360647659
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 360647656}
+  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
 --- !u!1 &374193395
 GameObject:
   m_ObjectHideFlags: 0
@@ -1560,16 +1929,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 401442266}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_LocalScale: {x: 0.85005, y: 0.5266, z: 0.5}
   m_Children: []
   m_Father: {fileID: 1620783689}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000015259, y: 69}
+  m_AnchoredPosition: {x: -0.000015259, y: 73}
   m_SizeDelta: {x: 106.17, y: 275.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &401442268
@@ -1590,7 +1959,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 43e36d1edb9c7c34c847ac17dddb4d2b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c87cb1e93ca7e2747bdb9aeaed82d29f, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1910,18 +2279,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 510062261}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 557803186}
   m_Father: {fileID: 1620783689}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -52.8}
-  m_SizeDelta: {x: -646.5, y: -324.7}
+  m_AnchoredPosition: {x: 1.7999878, y: -69.94501}
+  m_SizeDelta: {x: -922.7999, y: -362.68994}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &510062263
 MonoBehaviour:
@@ -1999,7 +2368,7 @@ AudioSource:
   m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 3eed9d577ed877d41a9b8a60cd7e1fc0, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 03325a805159cc741be8a1760eb549d6, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -2197,7 +2566,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.5, y: 0}
-  m_SizeDelta: {x: 231.8, y: 64.6}
+  m_SizeDelta: {x: 231.8, y: 85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &557803187
 MonoBehaviour:
@@ -2230,8 +2599,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Regardez dans la direction souhait\xE9e et faites un V avec votre index
-    et votre majeur devant vous sans bouger durant 3 secondes"
+  m_Text: "Regardez dans la direction souhait\xE9e et tournez la paume de votre main
+    devant vous sans bouger durant 3 secondes pour prendre une photo"
 --- !u!222 &557803188
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2251,7 +2620,7 @@ GameObject:
   - component: {fileID: 580414143}
   - component: {fileID: 580414144}
   m_Layer: 0
-  m_Name: "r\xE9sultat"
+  m_Name: resultat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2615,18 +2984,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 639246462}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 683628653}
   m_Father: {fileID: 1266994773}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -50.6}
-  m_SizeDelta: {x: -646.5, y: -320.4}
+  m_AnchoredPosition: {x: 1.7999878, y: -74}
+  m_SizeDelta: {x: -922.7999, y: -370.8}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &639246464
 MonoBehaviour:
@@ -2731,7 +3100,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: J'ai compris
+  m_Text: A mon tour !
 --- !u!222 &650540205
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2809,7 +3178,7 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: "S\xE9lectionnez un tableau de r\xE9f\xE9rence en vous mettant devant lui
-    et fixez-le du regard puis claquez des doigts devant vous"
+    et fixez-le du regard puis pincez votre index avec votre pouce devant vous"
 --- !u!222 &683628655
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3060,83 +3429,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783990283}
   m_CullTransparentMesh: 0
---- !u!1 &799836694
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 799836695}
-  - component: {fileID: 799836697}
-  - component: {fileID: 799836696}
-  m_Layer: 0
-  m_Name: ToileSubstitute
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &799836695
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799836694}
-  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
-  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
-  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
-  m_Children: []
-  m_Father: {fileID: 1637258060}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &799836696
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799836694}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &799836697
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 799836694}
-  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
 --- !u!1 &861535571
 GameObject:
   m_ObjectHideFlags: 0
@@ -3218,7 +3510,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 861535571}
   m_CullTransparentMesh: 0
---- !u!1 &900963008
+--- !u!1 &908956114
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3226,75 +3518,74 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 900963009}
-  - component: {fileID: 900963011}
-  - component: {fileID: 900963010}
+  - component: {fileID: 908956117}
+  - component: {fileID: 908956116}
+  - component: {fileID: 908956115}
   m_Layer: 0
-  m_Name: ToileSubstitute
+  m_Name: Toile 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &900963009
+--- !u!65 &908956115
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908956114}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1529183, y: 0.7122259, z: 0.21828628}
+  m_Center: {x: 0.03772056, y: 1.1831546, z: 0.27145988}
+--- !u!114 &908956116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 908956114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourFullName: TransformedImageHandlerBehaviour
+  manager: {fileID: 0}
+  behaviourDefinitionRelativeFilePath: 
+  sceneOverridesRelativeFilePath: 
+  editorParametersJson: 
+  runtimeParametersJson: 
+  editorParameters:
+    behaviourName: TransformedImageHandlerBehaviour
+    entries: []
+    components: []
+  runtimeParameters:
+    behaviourName: TransformedImageHandlerBehaviour
+    entries: []
+    components: []
+  attachedAssetId: 
+  originIsClient: 0
+  serializedGameObjects: []
+  serializedComponents: []
+--- !u!4 &908956117
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900963008}
-  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
-  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
-  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
-  m_Children: []
-  m_Father: {fileID: 1859786839}
-  m_RootOrder: 0
+  m_GameObject: {fileID: 908956114}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 82, z: 0}
+  m_LocalScale: {x: 0.6666666, y: 0.6666666, z: 0.6666666}
+  m_Children:
+  - {fileID: 360647657}
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &900963010
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900963008}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &900963011
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 900963008}
-  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
 --- !u!1 &914026117
 GameObject:
   m_ObjectHideFlags: 0
@@ -3322,7 +3613,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 914026117}
   m_LocalRotation: {x: -0, y: 0.31571954, z: -0, w: 0.9488526}
-  m_LocalPosition: {x: 2.5196753, y: 2.066, z: -1.5257634}
+  m_LocalPosition: {x: 1.286, y: 0.947, z: 0.067}
   m_LocalScale: {x: 0.0338723, y: 0.0338723, z: 0.153965}
   m_Children: []
   m_Father: {fileID: 0}
@@ -3750,155 +4041,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1055498789}
   m_CullTransparentMesh: 0
---- !u!1 &1144102905
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1144102909}
-  - component: {fileID: 1144102908}
-  - component: {fileID: 1144102907}
-  - component: {fileID: 1144102906}
-  m_Layer: 0
-  m_Name: ToileHolder (4)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1144102906
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144102905}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1529183, y: 0.7122259, z: 0.21828628}
-  m_Center: {x: 0.03772056, y: 1.1831546, z: 0.27145988}
---- !u!114 &1144102907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144102905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behaviourFullName: TransformedImageHandlerBehaviour
-  manager: {fileID: 0}
-  behaviourDefinitionRelativeFilePath: 
-  sceneOverridesRelativeFilePath: 
-  editorParametersJson: 
-  runtimeParametersJson: 
-  editorParameters:
-    behaviourName: TransformedImageHandlerBehaviour
-    entries: []
-    components: []
-  runtimeParameters:
-    behaviourName: TransformedImageHandlerBehaviour
-    entries: []
-    components: []
-  attachedAssetId: 
-  originIsClient: 0
-  serializedGameObjects: []
-  serializedComponents: []
---- !u!114 &1144102908
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144102905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behaviourFullName: HoloForge.EditionModeBehaviour
-  manager: {fileID: 0}
-  behaviourDefinitionRelativeFilePath: 
-  sceneOverridesRelativeFilePath: 
-  editorParametersJson: 
-  runtimeParametersJson: 
-  editorParameters:
-    behaviourName: HoloForge.EditionModeBehaviour
-    entries:
-    - name: editModeActions
-      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: '{HFUnityEditorSerializationMode::ENUM::Holo.EditModeActions,
-        HSComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}'
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1144102908}
-      serializationMode: HFUnityEditorSerializationMode
-    - name: handlerTarget
-      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1144102908}
-      serializationMode: HFUnityEditorSerializationMode
-    - name: isGizmoDisplayed
-      serializedType: System.Boolean
-      serializedValue: False
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1144102908}
-      serializationMode: HFUnityEditorSerializationMode
-    components: []
-  runtimeParameters:
-    behaviourName: HoloForge.EditionModeBehaviour
-    entries:
-    - name: editModeActions
-      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: '{HFRuntimeSerializationMode::ENUM::Holo.EditModeActions, HSComponents,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}'
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1144102908}
-      serializationMode: HFRuntimeSerializationMode
-    - name: handlerTarget
-      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1144102908}
-      serializationMode: HFRuntimeSerializationMode
-    - name: isGizmoDisplayed
-      serializedType: System.Boolean
-      serializedValue: False
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1144102908}
-      serializationMode: HFRuntimeSerializationMode
-    components: []
-  attachedAssetId: 
-  originIsClient: 0
-  serializedGameObjects: []
-  serializedComponents: []
---- !u!4 &1144102909
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1144102905}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 82, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1795559061}
-  m_Father: {fileID: 0}
-  m_RootOrder: 19
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1173697118
 GameObject:
   m_ObjectHideFlags: 0
@@ -3962,10 +4104,10 @@ MonoBehaviour:
       serializedType: System.Collections.Generic.List`1[[Holo.HoloGameObject, HFHoloManager,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
       serializedValue: "[\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::18}\"\r\n
-        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::23}\"\r\n
-        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::24}\"\r\n
-        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::25}\"\r\n
-        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::26}\"\r\n
+        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::31}\"\r\n
+        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::32}\"\r\n
+        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::33}\"\r\n
+        \ },\r\n  {\r\n    \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::34}\"\r\n
         \ }\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1173697119}
@@ -4026,6 +4168,27 @@ MonoBehaviour:
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1173697119}
       serializationMode: HFUnityEditorSerializationMode
+    - name: tableau5
+      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::35}\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1173697119}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: firstXpTuto
+      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::36}\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1173697119}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: firstXpTuto2
+      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::37}\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1173697119}
+      serializationMode: HFUnityEditorSerializationMode
     - name: maxPhotos
       serializedType: System.Int32
       serializedValue: 4
@@ -4053,7 +4216,7 @@ MonoBehaviour:
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1173697119}
       serializationMode: HFUnityEditorSerializationMode
-    - name: "sonR\xE9sultat"
+    - name: sonResultat
       serializedType: Holo.HoloAudioSource, HFHoloBaseImplementation, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       serializedValue: "{\r\n  \"unityAudioSource\": \"{HFUnityEditorSerializationMode::Component::1::RELATIVE::3}\"\r\n}"
@@ -4078,6 +4241,13 @@ MonoBehaviour:
       serializedType: Holo.HoloAudioSource, HFHoloBaseImplementation, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       serializedValue: "{\r\n  \"unityAudioSource\": \"{HFUnityEditorSerializationMode::Component::1::RELATIVE::6}\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1173697119}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: sonAutreChoix
+      serializedType: Holo.HoloAudioSource, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityAudioSource\": \"{HFUnityEditorSerializationMode::Component::1::RELATIVE::7}\"\r\n}"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1173697119}
       serializationMode: HFUnityEditorSerializationMode
@@ -4238,12 +4408,12 @@ MonoBehaviour:
     - name: toileHolders
       serializedType: System.Collections.Generic.List`1[[Holo.HoloGameObject, HFHoloManager,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
-      serializedValue: "[\r\n  {\r\n    \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../ToileHolder
-        (1)::}\"\r\n  },\r\n  {\r\n    \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../ToileHolder
-        (2)::}\"\r\n  },\r\n  {\r\n    \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../ToileHolder
-        (3)::}\"\r\n  },\r\n  {\r\n    \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../ToileHolder
-        (4)::}\"\r\n  },\r\n  {\r\n    \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../ToileHolder
-        (5)::}\"\r\n  }\r\n]"
+      serializedValue: "[\r\n  {\r\n    \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../Toile
+        1::}\"\r\n  },\r\n  {\r\n    \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../Toile
+        2::}\"\r\n  },\r\n  {\r\n    \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../Toile
+        3::}\"\r\n  },\r\n  {\r\n    \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../Toile
+        4::}\"\r\n  },\r\n  {\r\n    \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../Toile
+        5::}\"\r\n  }\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1173697119}
       serializationMode: HFRuntimeSerializationMode
@@ -4303,6 +4473,27 @@ MonoBehaviour:
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1173697119}
       serializationMode: HFRuntimeSerializationMode
+    - name: tableau5
+      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../udnie::}\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1173697119}
+      serializationMode: HFRuntimeSerializationMode
+    - name: firstXpTuto
+      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../Tuto/PrisePhoto::}\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1173697119}
+      serializationMode: HFRuntimeSerializationMode
+    - name: firstXpTuto2
+      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../Tuto/ChoixTableau::}\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1173697119}
+      serializationMode: HFRuntimeSerializationMode
     - name: maxPhotos
       serializedType: System.Int32
       serializedValue: 4
@@ -4333,10 +4524,10 @@ MonoBehaviour:
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1173697119}
       serializationMode: HFRuntimeSerializationMode
-    - name: "sonR\xE9sultat"
+    - name: sonResultat
       serializedType: Holo.HoloAudioSource, HFHoloBaseImplementation, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityAudioSource\": \"{HFRuntimeSerializationMode::Component::0::../Sounds/r\xE9sultat::::UnityEngine.AudioSource,
+      serializedValue: "{\r\n  \"unityAudioSource\": \"{HFRuntimeSerializationMode::Component::0::../Sounds/resultat::::UnityEngine.AudioSource,
         UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}\"\r\n}"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1173697119}
@@ -4361,6 +4552,14 @@ MonoBehaviour:
       serializedType: Holo.HoloAudioSource, HFHoloBaseImplementation, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       serializedValue: "{\r\n  \"unityAudioSource\": \"{HFRuntimeSerializationMode::Component::0::../Sounds/styleChoisi::::UnityEngine.AudioSource,
+        UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 1173697119}
+      serializationMode: HFRuntimeSerializationMode
+    - name: sonAutreChoix
+      serializedType: Holo.HoloAudioSource, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityAudioSource\": \"{HFRuntimeSerializationMode::Component::0::../Sounds/autreChoix::::UnityEngine.AudioSource,
         UnityEngine.AudioModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}\"\r\n}"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1173697119}
@@ -4521,10 +4720,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 1395818958}
-  - {fileID: 1637258056}
-  - {fileID: 1144102905}
-  - {fileID: 1859786835}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 908956114}
+  - {fileID: 339376906}
+  - {fileID: 2073021509}
+  - {fileID: 1786093157}
+  - {fileID: 2081118030}
+  - {fileID: 1620783688}
+  - {fileID: 1266994769}
   serializedComponents:
   - {fileID: 503092296}
   - {fileID: 55151529}
@@ -4533,6 +4743,7 @@ MonoBehaviour:
   - {fileID: 1225662053}
   - {fileID: 147636158}
   - {fileID: 1967081862}
+  - {fileID: 342425749}
 --- !u!224 &1173697122
 RectTransform:
   m_ObjectHideFlags: 0
@@ -4552,83 +4763,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 10}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!1 &1176187957
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1176187958}
-  - component: {fileID: 1176187960}
-  - component: {fileID: 1176187959}
-  m_Layer: 0
-  m_Name: ToileSubstitute
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1176187958
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176187957}
-  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
-  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
-  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
-  m_Children: []
-  m_Father: {fileID: 1395818962}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1176187959
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176187957}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1176187960
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1176187957}
-  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
 --- !u!1 &1225662051
 GameObject:
   m_ObjectHideFlags: 0
@@ -4842,9 +4976,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1266994769}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.003, y: 0.003, z: 0.003}
+  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_Children:
   - {fileID: 30056863}
   - {fileID: 639246463}
@@ -4852,7 +4986,7 @@ RectTransform:
   - {fileID: 2070772163}
   m_Father: {fileID: 1423236634}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -5629,7 +5763,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: J'ai compris
+  m_Text: A mon tour !
 --- !u!222 &1370272968
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5638,7 +5772,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1370272965}
   m_CullTransparentMesh: 0
---- !u!1 &1395818958
+--- !u!1 &1401319389
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5646,147 +5780,75 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1395818962}
-  - component: {fileID: 1395818961}
-  - component: {fileID: 1395818960}
-  - component: {fileID: 1395818959}
+  - component: {fileID: 1401319390}
+  - component: {fileID: 1401319392}
+  - component: {fileID: 1401319391}
   m_Layer: 0
-  m_Name: ToileHolder (2)
+  m_Name: ToileSubstitute
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1395818959
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395818958}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1529183, y: 0.7122259, z: 0.21828628}
-  m_Center: {x: 0.03772056, y: 1.1831546, z: 0.27145988}
---- !u!114 &1395818960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395818958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behaviourFullName: TransformedImageHandlerBehaviour
-  manager: {fileID: 0}
-  behaviourDefinitionRelativeFilePath: 
-  sceneOverridesRelativeFilePath: 
-  editorParametersJson: 
-  runtimeParametersJson: 
-  editorParameters:
-    behaviourName: TransformedImageHandlerBehaviour
-    entries: []
-    components: []
-  runtimeParameters:
-    behaviourName: TransformedImageHandlerBehaviour
-    entries: []
-    components: []
-  attachedAssetId: 
-  originIsClient: 0
-  serializedGameObjects: []
-  serializedComponents: []
---- !u!114 &1395818961
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395818958}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behaviourFullName: HoloForge.EditionModeBehaviour
-  manager: {fileID: 0}
-  behaviourDefinitionRelativeFilePath: 
-  sceneOverridesRelativeFilePath: 
-  editorParametersJson: 
-  runtimeParametersJson: 
-  editorParameters:
-    behaviourName: HoloForge.EditionModeBehaviour
-    entries:
-    - name: editModeActions
-      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: '{HFUnityEditorSerializationMode::ENUM::Holo.EditModeActions,
-        HSComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}'
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1395818961}
-      serializationMode: HFUnityEditorSerializationMode
-    - name: handlerTarget
-      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1395818961}
-      serializationMode: HFUnityEditorSerializationMode
-    - name: isGizmoDisplayed
-      serializedType: System.Boolean
-      serializedValue: False
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1395818961}
-      serializationMode: HFUnityEditorSerializationMode
-    components: []
-  runtimeParameters:
-    behaviourName: HoloForge.EditionModeBehaviour
-    entries:
-    - name: editModeActions
-      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: '{HFRuntimeSerializationMode::ENUM::Holo.EditModeActions, HSComponents,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}'
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1395818961}
-      serializationMode: HFRuntimeSerializationMode
-    - name: handlerTarget
-      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1395818961}
-      serializationMode: HFRuntimeSerializationMode
-    - name: isGizmoDisplayed
-      serializedType: System.Boolean
-      serializedValue: False
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1395818961}
-      serializationMode: HFRuntimeSerializationMode
-    components: []
-  attachedAssetId: 
-  originIsClient: 0
-  serializedGameObjects: []
-  serializedComponents: []
---- !u!4 &1395818962
+--- !u!4 &1401319390
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1395818958}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 82, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1176187958}
-  m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_GameObject: {fileID: 1401319389}
+  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
+  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
+  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
+  m_Children: []
+  m_Father: {fileID: 2073021512}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1401319391
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401319389}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1401319392
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401319389}
+  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
 --- !u!1 &1421947229
 GameObject:
   m_ObjectHideFlags: 0
@@ -6324,7 +6386,7 @@ Transform:
   - {fileID: 1620783689}
   - {fileID: 1266994773}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1423236635
 MonoBehaviour:
@@ -6531,7 +6593,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1499578866}
   m_LocalRotation: {x: -0, y: 0.31571954, z: -0, w: 0.9488526}
-  m_LocalPosition: {x: 3.054104, y: 1.486, z: -1.925691}
+  m_LocalPosition: {x: 2.35, y: 1.7, z: -0.73}
   m_LocalScale: {x: 0.055, y: 0.055, z: 0.25}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6697,18 +6759,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1568324069}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 650540203}
   m_Father: {fileID: 1266994773}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_AnchorMin: {x: 0.049000002, y: 0.023000002}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -125.05}
-  m_SizeDelta: {x: -646.5, y: -343.1}
+  m_AnchoredPosition: {x: -28.800064, y: -162.6}
+  m_SizeDelta: {x: -861.7999, y: -396}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1568324071
 MonoBehaviour:
@@ -6769,7 +6831,7 @@ MonoBehaviour:
       serializationMode: HFUnityEditorSerializationMode
     - name: eventType
       serializedType: System.String
-      serializedValue: HoloForge.ActionTriggerExtension.Event.EventGaze
+      serializedValue: HoloForge.ActionTriggerExtension.Event.EventTouch
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFUnityEditorSerializationMode
@@ -6778,14 +6840,14 @@ MonoBehaviour:
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
       serializedValue: "[\r\n  {\r\n    \"Key\": \"eventType\",\r\n    \"Value\":
-        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeEventUser,
+        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchEvent,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
-        \     \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeEventUser,
-        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::OnTap}\"\r\n
+        \     \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchEvent,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::OnTouchEnter}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"stateType\",\r\n    \"Value\": {\r\n
-        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeState, HSBaseBehaviours,
+        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchState, HSBaseBehaviours,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n      \"value\":
-        \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeState,
+        \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchState,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::None}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"ComponentRights\",\r\n    \"Value\":
         {\r\n      \"type\": \"Holo.ComponentRights, HFHoloBaseImplementation, Version=0.0.0.0,
@@ -6796,27 +6858,34 @@ MonoBehaviour:
         \ },\r\n  {\r\n    \"Key\": \"GameObject\",\r\n    \"Value\": {\r\n      \"type\":
         \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
         \     \"value\": \"{\\r\\n  \\\"unityGameObject\\\": \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::0}\\\"\\r\\n}\"\r\n
-        \   }\r\n  }\r\n]"
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"hand\",\r\n    \"Value\": {\r\n      \"type\":
+        \"Holo.Handness, HFGesturesComponent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \     \"value\": \"{HFUnityEditorSerializationMode::ENUM::Holo.Handness, HFGesturesComponent,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Any}\"\r\n    }\r\n
+        \ },\r\n  {\r\n    \"Key\": \"MaxTouchDistance\",\r\n    \"Value\": {\r\n
+        \     \"type\": \"System.Single\",\r\n      \"value\": \"0\"\r\n    }\r\n
+        \ }\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFUnityEditorSerializationMode
     - name: nbCommands
       serializedType: System.Int32
-      serializedValue: 1
+      serializedValue: 2
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFUnityEditorSerializationMode
     - name: actionBoolList
       serializedType: System.Collections.Generic.List`1[[System.Boolean, mscorlib,
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-      serializedValue: "[\r\n  \"True\"\r\n]"
+      serializedValue: "[\r\n  \"True\",\r\n  \"False\"\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFUnityEditorSerializationMode
     - name: actionTypeList
       serializedType: System.Collections.Generic.List`1[[System.String, mscorlib,
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-      serializedValue: "[\r\n  \"HoloForge.ActionTriggerExtension.Action.ActionScript\"\r\n]"
+      serializedValue: "[\r\n  \"HoloForge.ActionTriggerExtension.Action.ActionScript\",\r\n
+        \ \"HoloForge.ActionTriggerExtension.Action.ActionAudio\"\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFUnityEditorSerializationMode
@@ -6835,18 +6904,29 @@ MonoBehaviour:
         \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
         {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
-        \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::2}\\\"\\r\\n}\"\r\n
+        \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::4}\\\"\\r\\n}\"\r\n
         \     }\r\n    },\r\n    {\r\n      \"Key\": \"setObjectActiveValue\",\r\n
         \     \"Value\": {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\":
         \"False\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\": \"behaviourName\",\r\n
         \     \"Value\": {\r\n        \"type\": \"System.String\",\r\n        \"value\":
-        \"ExperienceFlowManager\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
+        \"PhotoCaptureBehaviour\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
         \"methodName\",\r\n      \"Value\": {\r\n        \"type\": \"System.String\",\r\n
-        \       \"value\": \"StartFlow\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
+        \       \"value\": \"HideSecondTuto\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
         \"parameters\",\r\n      \"Value\": {\r\n        \"type\": \"System.Collections.Generic.Dictionary`2[[System.String,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\",\r\n
-        \       \"value\": \"[]\"\r\n      }\r\n    }\r\n  ]\r\n]"
+        \       \"value\": \"[]\"\r\n      }\r\n    }\r\n  ],\r\n  [\r\n    {\r\n
+        \     \"Key\": \"action\",\r\n      \"Value\": {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.AudioAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \       \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.AudioAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Play}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"shared\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\": \"True\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
+        {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
+        \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::3}\\\"\\r\\n}\"\r\n
+        \     }\r\n    }\r\n  ]\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFUnityEditorSerializationMode
@@ -6936,7 +7016,7 @@ MonoBehaviour:
       serializationMode: HFRuntimeSerializationMode
     - name: eventType
       serializedType: System.String
-      serializedValue: HoloForge.ActionTriggerExtension.Event.EventGaze
+      serializedValue: HoloForge.ActionTriggerExtension.Event.EventTouch
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFRuntimeSerializationMode
@@ -6945,14 +7025,14 @@ MonoBehaviour:
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
       serializedValue: "[\r\n  {\r\n    \"Key\": \"eventType\",\r\n    \"Value\":
-        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeEventUser,
+        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchEvent,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
-        \     \"value\": \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeEventUser,
-        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::101}\"\r\n
+        \     \"value\": \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchEvent,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::1}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"stateType\",\r\n    \"Value\": {\r\n
-        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeState, HSBaseBehaviours,
+        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchState, HSBaseBehaviours,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n      \"value\":
-        \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeState,
+        \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchState,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"ComponentRights\",\r\n    \"Value\":
         {\r\n      \"type\": \"Holo.ComponentRights, HFHoloBaseImplementation, Version=0.0.0.0,
@@ -6963,27 +7043,33 @@ MonoBehaviour:
         \ },\r\n  {\r\n    \"Key\": \"GameObject\",\r\n    \"Value\": {\r\n      \"type\":
         \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
         \     \"value\": \"{\\r\\n  \\\"unityGameObject\\\": \\\"{HFRuntimeSerializationMode::GameObject::0::CURRENT_GAMEOBJECT::}\\\"\\r\\n}\"\r\n
-        \   }\r\n  }\r\n]"
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"hand\",\r\n    \"Value\": {\r\n      \"type\":
+        \"Holo.Handness, HFGesturesComponent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \     \"value\": \"{HFRuntimeSerializationMode::ENUM::Holo.Handness, HFGesturesComponent,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::7}\"\r\n    }\r\n  },\r\n
+        \ {\r\n    \"Key\": \"MaxTouchDistance\",\r\n    \"Value\": {\r\n      \"type\":
+        \"System.Single\",\r\n      \"value\": \"0\"\r\n    }\r\n  }\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFRuntimeSerializationMode
     - name: nbCommands
       serializedType: System.Int32
-      serializedValue: 1
+      serializedValue: 2
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFRuntimeSerializationMode
     - name: actionBoolList
       serializedType: System.Collections.Generic.List`1[[System.Boolean, mscorlib,
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-      serializedValue: "[\r\n  \"True\"\r\n]"
+      serializedValue: "[\r\n  \"True\",\r\n  \"False\"\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFRuntimeSerializationMode
     - name: actionTypeList
       serializedType: System.Collections.Generic.List`1[[System.String, mscorlib,
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]]
-      serializedValue: "[\r\n  \"HoloForge.ActionTriggerExtension.Action.ActionScript\"\r\n]"
+      serializedValue: "[\r\n  \"HoloForge.ActionTriggerExtension.Action.ActionScript\",\r\n
+        \ \"HoloForge.ActionTriggerExtension.Action.ActionAudio\"\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFRuntimeSerializationMode
@@ -7002,18 +7088,29 @@ MonoBehaviour:
         \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
         {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
-        \\\"{HFRuntimeSerializationMode::GameObject::0::../../../ExperienceFlowManager::}\\\"\\r\\n}\"\r\n
+        \\\"{HFRuntimeSerializationMode::GameObject::0::../../../FirstXpGestureManager::}\\\"\\r\\n}\"\r\n
         \     }\r\n    },\r\n    {\r\n      \"Key\": \"setObjectActiveValue\",\r\n
         \     \"Value\": {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\":
         \"False\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\": \"behaviourName\",\r\n
         \     \"Value\": {\r\n        \"type\": \"System.String\",\r\n        \"value\":
-        \"ExperienceFlowManager\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
+        \"PhotoCaptureBehaviour\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
         \"methodName\",\r\n      \"Value\": {\r\n        \"type\": \"System.String\",\r\n
-        \       \"value\": \"StartFlow\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
+        \       \"value\": \"HideSecondTuto\"\r\n      }\r\n    },\r\n    {\r\n      \"Key\":
         \"parameters\",\r\n      \"Value\": {\r\n        \"type\": \"System.Collections.Generic.Dictionary`2[[System.String,
         mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]\",\r\n
-        \       \"value\": \"[]\"\r\n      }\r\n    }\r\n  ]\r\n]"
+        \       \"value\": \"[]\"\r\n      }\r\n    }\r\n  ],\r\n  [\r\n    {\r\n
+        \     \"Key\": \"action\",\r\n      \"Value\": {\r\n        \"type\": \"HoloForge.ActionTriggerExtension.Action.AudioAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \       \"value\": \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Action.AudioAction,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::201}\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"shared\",\r\n      \"Value\":
+        {\r\n        \"type\": \"System.Boolean\",\r\n        \"value\": \"True\"\r\n
+        \     }\r\n    },\r\n    {\r\n      \"Key\": \"target\",\r\n      \"Value\":
+        {\r\n        \"type\": \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null\",\r\n        \"value\": \"{\\r\\n  \\\"unityGameObject\\\":
+        \\\"{HFRuntimeSerializationMode::GameObject::0::../../../Sounds/styleChoisi::}\\\"\\r\\n}\"\r\n
+        \     }\r\n    }\r\n  ]\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1568324071}
       serializationMode: HFRuntimeSerializationMode
@@ -7068,6 +7165,8 @@ MonoBehaviour:
   - {fileID: 1568324069}
   - {fileID: 1266994769}
   - {fileID: 2076923305}
+  - {fileID: 1967081860}
+  - {fileID: 1173697118}
   serializedComponents: []
 --- !u!65 &1568324072
 BoxCollider:
@@ -7080,8 +7179,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 572.7027, y: 114.8424, z: 13.214025}
-  m_Center: {x: 0.37841004, y: -0.51003695, z: 0.09233381}
+  m_Size: {x: 316.8623, y: 65.32604, z: 38.50297}
+  m_Center: {x: -0.25512275, y: -1.1151619, z: 2.2703314}
 --- !u!114 &1568324073
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7142,17 +7241,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1581197377}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.7625, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1620783689}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -646.5, y: -93}
+  m_AnchoredPosition: {x: 1.5, y: 0}
+  m_SizeDelta: {x: -829.80005, y: -93}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1581197379
 MonoBehaviour:
@@ -7216,7 +7315,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1586455188}
   m_LocalRotation: {x: -0, y: 0.31571954, z: -0, w: 0.9488526}
-  m_LocalPosition: {x: 1.9932529, y: 1.486, z: -1.1318271}
+  m_LocalPosition: {x: 1.2604289, y: 0.956, z: 0.086072415}
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_Children: []
   m_Father: {fileID: 0}
@@ -7453,9 +7552,9 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1620783688}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.003, y: 0.003, z: 0.003}
+  m_LocalScale: {x: 0.001, y: 0.001, z: 0.001}
   m_Children:
   - {fileID: 1581197378}
   - {fileID: 510062262}
@@ -7529,155 +7628,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
---- !u!1 &1637258056
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1637258060}
-  - component: {fileID: 1637258059}
-  - component: {fileID: 1637258058}
-  - component: {fileID: 1637258057}
-  m_Layer: 0
-  m_Name: ToileHolder (3)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1637258057
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637258056}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1.1529183, y: 0.7122259, z: 0.21828628}
-  m_Center: {x: 0.03772056, y: 1.1831546, z: 0.27145988}
---- !u!114 &1637258058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637258056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behaviourFullName: TransformedImageHandlerBehaviour
-  manager: {fileID: 0}
-  behaviourDefinitionRelativeFilePath: 
-  sceneOverridesRelativeFilePath: 
-  editorParametersJson: 
-  runtimeParametersJson: 
-  editorParameters:
-    behaviourName: TransformedImageHandlerBehaviour
-    entries: []
-    components: []
-  runtimeParameters:
-    behaviourName: TransformedImageHandlerBehaviour
-    entries: []
-    components: []
-  attachedAssetId: 
-  originIsClient: 0
-  serializedGameObjects: []
-  serializedComponents: []
---- !u!114 &1637258059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637258056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behaviourFullName: HoloForge.EditionModeBehaviour
-  manager: {fileID: 0}
-  behaviourDefinitionRelativeFilePath: 
-  sceneOverridesRelativeFilePath: 
-  editorParametersJson: 
-  runtimeParametersJson: 
-  editorParameters:
-    behaviourName: HoloForge.EditionModeBehaviour
-    entries:
-    - name: editModeActions
-      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: '{HFUnityEditorSerializationMode::ENUM::Holo.EditModeActions,
-        HSComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}'
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1637258059}
-      serializationMode: HFUnityEditorSerializationMode
-    - name: handlerTarget
-      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1637258059}
-      serializationMode: HFUnityEditorSerializationMode
-    - name: isGizmoDisplayed
-      serializedType: System.Boolean
-      serializedValue: False
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1637258059}
-      serializationMode: HFUnityEditorSerializationMode
-    components: []
-  runtimeParameters:
-    behaviourName: HoloForge.EditionModeBehaviour
-    entries:
-    - name: editModeActions
-      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: '{HFRuntimeSerializationMode::ENUM::Holo.EditModeActions, HSComponents,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}'
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1637258059}
-      serializationMode: HFRuntimeSerializationMode
-    - name: handlerTarget
-      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1637258059}
-      serializationMode: HFRuntimeSerializationMode
-    - name: isGizmoDisplayed
-      serializedType: System.Boolean
-      serializedValue: False
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1637258059}
-      serializationMode: HFRuntimeSerializationMode
-    components: []
-  attachedAssetId: 
-  originIsClient: 0
-  serializedGameObjects: []
-  serializedComponents: []
---- !u!4 &1637258060
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1637258056}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 82, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 799836695}
-  m_Father: {fileID: 0}
-  m_RootOrder: 18
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1655693154
 GameObject:
   m_ObjectHideFlags: 0
@@ -7812,7 +7762,7 @@ MonoBehaviour:
       serializationMode: HFUnityEditorSerializationMode
     - name: eventType
       serializedType: System.String
-      serializedValue: HoloForge.ActionTriggerExtension.Event.EventGaze
+      serializedValue: HoloForge.ActionTriggerExtension.Event.EventTouch
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1655693158}
       serializationMode: HFUnityEditorSerializationMode
@@ -7821,14 +7771,14 @@ MonoBehaviour:
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
       serializedValue: "[\r\n  {\r\n    \"Key\": \"eventType\",\r\n    \"Value\":
-        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeEventUser,
+        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchEvent,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
-        \     \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeEventUser,
-        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::OnTap}\"\r\n
+        \     \"value\": \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchEvent,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::OnTouchExit}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"stateType\",\r\n    \"Value\": {\r\n
-        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeState, HSBaseBehaviours,
+        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchState, HSBaseBehaviours,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n      \"value\":
-        \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeState,
+        \"{HFUnityEditorSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchState,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::None}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"ComponentRights\",\r\n    \"Value\":
         {\r\n      \"type\": \"Holo.ComponentRights, HFHoloBaseImplementation, Version=0.0.0.0,
@@ -7839,7 +7789,13 @@ MonoBehaviour:
         \ },\r\n  {\r\n    \"Key\": \"GameObject\",\r\n    \"Value\": {\r\n      \"type\":
         \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
         \     \"value\": \"{\\r\\n  \\\"unityGameObject\\\": \\\"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::1}\\\"\\r\\n}\"\r\n
-        \   }\r\n  }\r\n]"
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"hand\",\r\n    \"Value\": {\r\n      \"type\":
+        \"Holo.Handness, HFGesturesComponent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \     \"value\": \"{HFUnityEditorSerializationMode::ENUM::Holo.Handness, HFGesturesComponent,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Any}\"\r\n    }\r\n
+        \ },\r\n  {\r\n    \"Key\": \"MaxTouchDistance\",\r\n    \"Value\": {\r\n
+        \     \"type\": \"System.Single\",\r\n      \"value\": \"0\"\r\n    }\r\n
+        \ }\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1655693158}
       serializationMode: HFUnityEditorSerializationMode
@@ -7987,7 +7943,7 @@ MonoBehaviour:
       serializationMode: HFRuntimeSerializationMode
     - name: eventType
       serializedType: System.String
-      serializedValue: HoloForge.ActionTriggerExtension.Event.EventGaze
+      serializedValue: HoloForge.ActionTriggerExtension.Event.EventTouch
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1655693158}
       serializationMode: HFRuntimeSerializationMode
@@ -7996,14 +7952,14 @@ MonoBehaviour:
         Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089],[Holo.EventAttribute,
         HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]
       serializedValue: "[\r\n  {\r\n    \"Key\": \"eventType\",\r\n    \"Value\":
-        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeEventUser,
+        {\r\n      \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchEvent,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
-        \     \"value\": \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeEventUser,
-        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::101}\"\r\n
+        \     \"value\": \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchEvent,
+        HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::2}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"stateType\",\r\n    \"Value\": {\r\n
-        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.GazeState, HSBaseBehaviours,
+        \     \"type\": \"HoloForge.ActionTriggerExtension.Event.TouchState, HSBaseBehaviours,
         Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n      \"value\":
-        \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.GazeState,
+        \"{HFRuntimeSerializationMode::ENUM::HoloForge.ActionTriggerExtension.Event.TouchState,
         HSBaseBehaviours, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}\"\r\n
         \   }\r\n  },\r\n  {\r\n    \"Key\": \"ComponentRights\",\r\n    \"Value\":
         {\r\n      \"type\": \"Holo.ComponentRights, HFHoloBaseImplementation, Version=0.0.0.0,
@@ -8014,7 +7970,12 @@ MonoBehaviour:
         \ },\r\n  {\r\n    \"Key\": \"GameObject\",\r\n    \"Value\": {\r\n      \"type\":
         \"Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
         \     \"value\": \"{\\r\\n  \\\"unityGameObject\\\": \\\"{HFRuntimeSerializationMode::GameObject::0::CURRENT_GAMEOBJECT::}\\\"\\r\\n}\"\r\n
-        \   }\r\n  }\r\n]"
+        \   }\r\n  },\r\n  {\r\n    \"Key\": \"hand\",\r\n    \"Value\": {\r\n      \"type\":
+        \"Holo.Handness, HFGesturesComponent, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null\",\r\n
+        \     \"value\": \"{HFRuntimeSerializationMode::ENUM::Holo.Handness, HFGesturesComponent,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::7}\"\r\n    }\r\n  },\r\n
+        \ {\r\n    \"Key\": \"MaxTouchDistance\",\r\n    \"Value\": {\r\n      \"type\":
+        \"System.Single\",\r\n      \"value\": \"0\"\r\n    }\r\n  }\r\n]"
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 1655693158}
       serializationMode: HFRuntimeSerializationMode
@@ -8527,7 +8488,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1795559060
+--- !u!1 &1786093157
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8535,114 +8496,36 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1795559061}
-  - component: {fileID: 1795559063}
-  - component: {fileID: 1795559062}
+  - component: {fileID: 1786093160}
+  - component: {fileID: 1786093159}
+  - component: {fileID: 1786093158}
   m_Layer: 0
-  m_Name: ToileSubstitute
+  m_Name: Toile 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1795559061
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795559060}
-  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
-  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
-  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
-  m_Children: []
-  m_Father: {fileID: 1144102909}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &1795559062
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795559060}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
---- !u!33 &1795559063
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795559060}
-  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
---- !u!1 &1859786835
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1859786839}
-  - component: {fileID: 1859786838}
-  - component: {fileID: 1859786837}
-  - component: {fileID: 1859786836}
-  m_Layer: 0
-  m_Name: ToileHolder (5)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!65 &1859786836
+--- !u!65 &1786093158
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859786835}
+  m_GameObject: {fileID: 1786093157}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.1529183, y: 0.7122259, z: 0.21828628}
   m_Center: {x: 0.03772056, y: 1.1831546, z: 0.27145988}
---- !u!114 &1859786837
+--- !u!114 &1786093159
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859786835}
+  m_GameObject: {fileID: 1786093157}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
@@ -8666,92 +8549,20 @@ MonoBehaviour:
   originIsClient: 0
   serializedGameObjects: []
   serializedComponents: []
---- !u!114 &1859786838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859786835}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  behaviourFullName: HoloForge.EditionModeBehaviour
-  manager: {fileID: 0}
-  behaviourDefinitionRelativeFilePath: 
-  sceneOverridesRelativeFilePath: 
-  editorParametersJson: 
-  runtimeParametersJson: 
-  editorParameters:
-    behaviourName: HoloForge.EditionModeBehaviour
-    entries:
-    - name: editModeActions
-      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: '{HFUnityEditorSerializationMode::ENUM::Holo.EditModeActions,
-        HSComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}'
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1859786838}
-      serializationMode: HFUnityEditorSerializationMode
-    - name: handlerTarget
-      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1859786838}
-      serializationMode: HFUnityEditorSerializationMode
-    - name: isGizmoDisplayed
-      serializedType: System.Boolean
-      serializedValue: False
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1859786838}
-      serializationMode: HFUnityEditorSerializationMode
-    components: []
-  runtimeParameters:
-    behaviourName: HoloForge.EditionModeBehaviour
-    entries:
-    - name: editModeActions
-      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: '{HFRuntimeSerializationMode::ENUM::Holo.EditModeActions, HSComponents,
-        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::0}'
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1859786838}
-      serializationMode: HFRuntimeSerializationMode
-    - name: handlerTarget
-      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1859786838}
-      serializationMode: HFRuntimeSerializationMode
-    - name: isGizmoDisplayed
-      serializedType: System.Boolean
-      serializedValue: False
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 1859786838}
-      serializationMode: HFRuntimeSerializationMode
-    components: []
-  attachedAssetId: 
-  originIsClient: 0
-  serializedGameObjects: []
-  serializedComponents: []
---- !u!4 &1859786839
+--- !u!4 &1786093160
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859786835}
+  m_GameObject: {fileID: 1786093157}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 82, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6666666, y: 0.6666666, z: 0.6666666}
   m_Children:
-  - {fileID: 900963009}
+  - {fileID: 308175871}
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1892261666
 GameObject:
@@ -8886,6 +8697,83 @@ Transform:
   m_Father: {fileID: 8923773027356686486}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1935435344
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1935435345}
+  - component: {fileID: 1935435347}
+  - component: {fileID: 1935435346}
+  m_Layer: 0
+  m_Name: ToileSubstitute
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1935435345
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935435344}
+  m_LocalRotation: {x: 0.015665404, y: -0.9807922, z: -0.17294008, w: -0.08884296}
+  m_LocalPosition: {x: 0.0360001, y: 1.149, z: 0.3220002}
+  m_LocalScale: {x: 0.44938618, y: 0.44938508, z: 0.4493859}
+  m_Children: []
+  m_Father: {fileID: 339376909}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &1935435346
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935435344}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 11802acc4db70f046983b04655b43e3a, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &1935435347
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935435344}
+  m_Mesh: {fileID: 4300068, guid: 2915d68bdf9519848b7f4e5725f49747, type: 3}
 --- !u!1 &1963478506
 GameObject:
   m_ObjectHideFlags: 0
@@ -9189,16 +9077,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070772162}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.411822, y: 1.411822, z: 1.411822}
   m_Children: []
   m_Father: {fileID: 1266994773}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000011444, y: 69}
+  m_AnchoredPosition: {x: 3, y: 75}
   m_SizeDelta: {x: 113.5, y: 119.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2070772164
@@ -9219,7 +9107,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 69378ccc5f2bcf94e9b5683dd135002e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1c8b150920666934d9ee434469f24d55, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -9236,6 +9124,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2070772162}
   m_CullTransparentMesh: 0
+--- !u!1 &2073021509
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2073021512}
+  - component: {fileID: 2073021511}
+  - component: {fileID: 2073021510}
+  m_Layer: 0
+  m_Name: Toile 4
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!65 &2073021510
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073021509}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.1529183, y: 0.7122259, z: 0.21828628}
+  m_Center: {x: 0.03772056, y: 1.1831546, z: 0.27145988}
+--- !u!114 &2073021511
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073021509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourFullName: TransformedImageHandlerBehaviour
+  manager: {fileID: 0}
+  behaviourDefinitionRelativeFilePath: 
+  sceneOverridesRelativeFilePath: 
+  editorParametersJson: 
+  runtimeParametersJson: 
+  editorParameters:
+    behaviourName: TransformedImageHandlerBehaviour
+    entries: []
+    components: []
+  runtimeParameters:
+    behaviourName: TransformedImageHandlerBehaviour
+    entries: []
+    components: []
+  attachedAssetId: 
+  originIsClient: 0
+  serializedGameObjects: []
+  serializedComponents: []
+--- !u!4 &2073021512
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2073021509}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 82, z: 0}
+  m_LocalScale: {x: 0.6666666, y: 0.6666666, z: 0.6666666}
+  m_Children:
+  - {fileID: 1401319390}
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2073261396
 GameObject:
   m_ObjectHideFlags: 0
@@ -9271,8 +9235,9 @@ Transform:
   - {fileID: 1225662052}
   - {fileID: 147636157}
   - {fileID: 1967081861}
+  - {fileID: 342425748}
   m_Father: {fileID: 0}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2076923305
 GameObject:
@@ -9312,20 +9277,6 @@ MonoBehaviour:
   editorParameters:
     behaviourName: ExperienceFlowManager
     entries:
-    - name: firstXpTuto
-      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::5}\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 2076923306}
-      serializationMode: HFUnityEditorSerializationMode
-    - name: firstXpTuto2
-      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityGameObject\": \"{HFUnityEditorSerializationMode::GameObject::1::RELATIVE::6}\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 2076923306}
-      serializationMode: HFUnityEditorSerializationMode
     - name: firstXpGestureManager
       serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -9340,7 +9291,7 @@ MonoBehaviour:
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 2076923306}
       serializationMode: HFUnityEditorSerializationMode
-    - name: "sonD\xE9but"
+    - name: sonDebut
       serializedType: Holo.HoloAudioSource, HFHoloBaseImplementation, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       serializedValue: "{\r\n  \"unityAudioSource\": \"{HFUnityEditorSerializationMode::Component::1::RELATIVE::0}\"\r\n}"
@@ -9453,20 +9404,6 @@ MonoBehaviour:
   runtimeParameters:
     behaviourName: ExperienceFlowManager
     entries:
-    - name: firstXpTuto
-      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../Tuto/PrisePhoto::}\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 2076923306}
-      serializationMode: HFRuntimeSerializationMode
-    - name: firstXpTuto2
-      serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      serializedValue: "{\r\n  \"unityGameObject\": \"{HFRuntimeSerializationMode::GameObject::0::../Tuto/ChoixTableau::}\"\r\n}"
-      relativeToTransform: {fileID: 0}
-      unityObjectReferencer: {fileID: 2076923306}
-      serializationMode: HFRuntimeSerializationMode
     - name: firstXpGestureManager
       serializedType: Holo.HoloGameObject, HFHoloManager, Version=0.0.0.0, Culture=neutral,
         PublicKeyToken=null
@@ -9481,7 +9418,7 @@ MonoBehaviour:
       relativeToTransform: {fileID: 0}
       unityObjectReferencer: {fileID: 2076923306}
       serializationMode: HFRuntimeSerializationMode
-    - name: "sonD\xE9but"
+    - name: sonDebut
       serializedType: Holo.HoloAudioSource, HFHoloBaseImplementation, Version=0.0.0.0,
         Culture=neutral, PublicKeyToken=null
       serializedValue: "{\r\n  \"unityAudioSource\": \"{HFRuntimeSerializationMode::Component::0::../Sounds/bienvenue::::UnityEngine.AudioSource,
@@ -9616,7 +9553,173 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2081118030
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2081118034}
+  - component: {fileID: 2081118033}
+  - component: {fileID: 2081118032}
+  - component: {fileID: 2081118031}
+  m_Layer: 0
+  m_Name: udnie
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &2081118031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081118030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8551cbb2ac46396408ce155475b77d40, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  behaviourFullName: HoloForge.EditionModeBehaviour
+  manager: {fileID: 0}
+  behaviourDefinitionRelativeFilePath: 
+  sceneOverridesRelativeFilePath: 
+  editorParametersJson: 
+  runtimeParametersJson: 
+  editorParameters:
+    behaviourName: HoloForge.EditionModeBehaviour
+    entries:
+    - name: editModeActions
+      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: '{HFUnityEditorSerializationMode::ENUM::Holo.EditModeActions,
+        HSComponents, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::ActivateObject}'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 2081118031}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: handlerTarget
+      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 2081118031}
+      serializationMode: HFUnityEditorSerializationMode
+    - name: isGizmoDisplayed
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 2081118031}
+      serializationMode: HFUnityEditorSerializationMode
+    components: []
+  runtimeParameters:
+    behaviourName: HoloForge.EditionModeBehaviour
+    entries:
+    - name: editModeActions
+      serializedType: Holo.EditModeActions, HSComponents, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      serializedValue: '{HFRuntimeSerializationMode::ENUM::Holo.EditModeActions, HSComponents,
+        Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::1}'
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 2081118031}
+      serializationMode: HFRuntimeSerializationMode
+    - name: handlerTarget
+      serializedType: Holo.HoloCollider, HFHoloBaseImplementation, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      serializedValue: "{\r\n  \"unityCollider\": \"NULL\"\r\n}"
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 2081118031}
+      serializationMode: HFRuntimeSerializationMode
+    - name: isGizmoDisplayed
+      serializedType: System.Boolean
+      serializedValue: False
+      relativeToTransform: {fileID: 0}
+      unityObjectReferencer: {fileID: 2081118031}
+      serializationMode: HFRuntimeSerializationMode
+    components: []
+  attachedAssetId: 
+  originIsClient: 0
+  serializedGameObjects: []
+  serializedComponents: []
+--- !u!65 &2081118032
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081118030}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5.2264676, y: 5.306297, z: 0.2}
+  m_Center: {x: 0.019300578, y: 0.0012339805, z: 0.00000033892564}
+--- !u!212 &2081118033
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081118030}
+  m_Enabled: 0
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 0
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 6
+  m_Sprite: {fileID: 21300000, guid: e00222831bb2da645a84a94c47e69588, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 12, y: 6.95}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!4 &2081118034
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2081118030}
+  m_LocalRotation: {x: -0, y: 0.31571954, z: -0, w: 0.9488526}
+  m_LocalPosition: {x: 1.286, y: 0.91, z: 0.067}
+  m_LocalScale: {x: 0.0677446, y: 0.0677446, z: 0.30793}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2096229709
 GameObject:
@@ -9778,7 +9881,7 @@ GameObject:
   - component: {fileID: 2117683302}
   - component: {fileID: 2117683303}
   m_Layer: 0
-  m_Name: ToileHolder (1)
+  m_Name: Toile 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9793,11 +9896,11 @@ Transform:
   m_GameObject: {fileID: 2117683299}
   m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 82, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.6666666, y: 0.6666666, z: 0.6666666}
   m_Children:
   - {fileID: 783270106}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2117683302
 MonoBehaviour:
@@ -9868,7 +9971,7 @@ Transform:
   m_GameObject: {fileID: 2133809609}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.92, y: 8.65, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.4}
   m_Children:
   - {fileID: 164862967}
   - {fileID: 612866677}
@@ -10035,7 +10138,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2141544202}
   m_LocalRotation: {x: -0, y: 0.31571954, z: -0, w: 0.9488526}
-  m_LocalPosition: {x: 2.5236785, y: 1.486, z: -1.5287591}
+  m_LocalPosition: {x: 1.2900033, y: 1.024, z: 0.06400427}
   m_LocalScale: {x: 0.050000004, y: 0.05, z: 0.050000004}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11398,7 +11501,7 @@ Transform:
   m_GameObject: {fileID: 8923773027356320950}
   m_LocalRotation: {x: -0, y: -0.9959225, z: -0, w: -0.0902135}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.449385, y: 0.449385, z: 0.449385}
+  m_LocalScale: {x: 0.29959, y: 0.29959, z: 0.29959}
   m_Children:
   - {fileID: 8923773027356686608}
   - {fileID: 8923773027356686606}

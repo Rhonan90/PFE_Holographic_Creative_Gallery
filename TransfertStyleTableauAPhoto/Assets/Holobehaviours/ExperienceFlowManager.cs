@@ -9,8 +9,6 @@ public class ExperienceFlowManager : HoloBehaviour
     [GazeComponent]
     public GazeComponent gazeComponent;
 
-    public HoloGameObject firstXpTuto;
-    public HoloGameObject firstXpTuto2;
     public HoloGameObject firstXpGestureManager;
     private PhotoCaptureBehaviour firstXpBehaviour;
 
@@ -19,64 +17,53 @@ public class ExperienceFlowManager : HoloBehaviour
 
     private bool firstXP = false;
     private bool xpStarted = false;
+    private bool flowStarted = false;
 
-    public HoloAudioSource sonDébut;
+    public HoloAudioSource sonDebut;
 
 
     public override void Start()
     {
         gestureComp.RegisterPose(HandPose.HandFaceToEachOther);
+        gestureComp.RegisterPose(HandPose.HandOpenedSky);
         gestureComp.OnPoseStart += OnPoseStarted;
         firstXpBehaviour = (PhotoCaptureBehaviour) firstXpGestureManager.GetBehaviour("PhotoCaptureBehaviour");
         secondXpBehaviour = (HoloRoomChange) secondXpGestureManager.GetBehaviour("HoloRoomChange");
-
-        sonDébut.enabled = true;
-        HoloCoroutine.StartCoroutine(StartAfterIntroCoroutine);
     }
 
 
-    public void StartFlow()
+    public void StartFlow(HoloGameObject tuto)
     {
         xpStarted = true;
         firstXP = true;
         firstXpBehaviour.StartXp();
-        firstXpTuto2.SetActive(false);
-        HoloCoroutine.StartCoroutine(firstXpBehaviour.VocalInstructionsCoroutine);
+        tuto.SetActive(false);
     }
 
     private void OnPoseStarted(HandPose handPose, Handness handness)
     {
+        if (handPose == HandPose.HandOpenedSky && !flowStarted)
+        {
+            flowStarted = true;
+            sonDebut.enabled = true;
+            HoloCoroutine.StartCoroutine(firstXpBehaviour.StartAfterIntroCoroutine);
+        }
         if (handPose == HandPose.HandFaceToEachOther && xpStarted)
         {
             if (firstXP)
             {
                 firstXpBehaviour.EndXp();
-                Log("Début de la seconde expérience");
+                Log("Debut de la seconde experience");
                 secondXpBehaviour.StartXp();
             }
             else
             {
                 secondXpBehaviour.EndXp();
                 firstXpBehaviour.StartXp();
-                Log("Début de la première expérience");
+                Log("Debut de la première experience");
             }
             firstXP = !firstXP;
         }
     }
 
-    IEnumerator StartAfterIntroCoroutine()
-    {
-        yield return HoloCoroutine.WaitForSeconds(2.5f);
-        firstXpTuto.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
-        firstXpTuto.transform.position.y = HoloCamera.mainCamera.transform.position.y;
-        firstXpTuto.SetActive(true);
-
-        firstXpTuto2.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 3;
-        firstXpTuto2.transform.position.y = HoloCamera.mainCamera.transform.position.y;
-    }
-
-    public void HideFirstTuto()
-    {
-        firstXpTuto.SetActive(false);
-    }
 }

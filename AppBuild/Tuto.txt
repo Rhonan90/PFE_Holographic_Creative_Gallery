@@ -1,0 +1,17 @@
+Pour faire fonctionner l'application :
+- lancer le serveur le serveur sur le PC (voir tuto serveur) 
+- lancer Holoscene Desktop
+- importer PFE_app_FacilitatorHoloLens.hszip
+- ouvrir dans la librairie
+- passer en mode édition, placer le chevalet, les box des tableaux (qui sont à droite de la position initiale du chevalet)
+- sauvegarder l'expérience
+- tester !
+
+Pour retester l'application après le set :
+- fermer l'application en cours dans le volet Explorer
+- ouvrir l'expérience créée
+- passer en mode édition puis en sortir (sinon bug des toiles Editable qui ne le sont plus ¯\_(ツ)_/¯)
+- tester
+
+
+ps : pour lancer l'application une fois l'expérience ouverte, il faut mettre son bras tendu devant soi avec la paume de la main tournée vers le haut (HandPose.HandOpenedSky)
