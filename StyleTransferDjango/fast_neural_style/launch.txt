@@ -1,1 +1,0 @@
-py neural_style/neural_style.py eval --content-image images/content-images/olivier.jpg --model saved_models/mosaic.pth --output-image media/images/output-images/olivier-style.jpg --cuda 0
