@@ -1,0 +1,29 @@
+{% extends "base_generic_style_transfer.html" %}
+
+{% block title %}<title>Style Transfer - Home</title>{% endblock %}
+
+{% block content %}
+  <h1>Style Transfer</h1>
+  <p>Welcome to <b>Style Transfer</b>, a website developed for the project <em>Holographic Creative Gallery</em>!</p>
+  <h2>Transfer a predefined style to your image</h2>
+  
+  <br/>
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Submit">
+  </form>
+  <br/>
+  {% if style_images %}
+    <div class="row">
+	  {% for style_image in style_images %}
+        <div class="col-sm-2">
+	      <img src="media/{{ style_image.img }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
+        <p>{{ style_image }}</p>
+        </div>
+	  {% endfor %}
+    </div>
+  {% else %}
+    <p>No style image uploaded</p>
+  {% endif %}
+{% endblock %}

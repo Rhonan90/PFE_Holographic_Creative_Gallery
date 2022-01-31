@@ -1,0 +1,46 @@
+{% extends "base_generic_style_transfer.html" %}
+
+{% block title %}<title>Style Transfer - Your Images</title>{% endblock %}
+
+{% block style %}
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+  <!-- Add additional CSS in static file -->
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+{% endblock %}
+
+{% block script %}
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+{% endblock %}
+
+
+{% block content %}
+  <h1>Style Transfer</h1>
+  <p>Welcome to <b>Style Transfer</b>, a website developed for the project <em>Holographic Creative Gallery</em>!</p>
+  
+  <h2>Content Images</h2>
+  {% if content_images %}
+    <div class="row">
+	  {% for content_image in content_images %}
+        <div class="col-sm-4">
+	      <img src="media/{{ content_image.img }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
+        </div>
+	  {% endfor %}
+    </div>
+  {% else %}
+    <p>No content image uploaded</p>
+  {% endif %}
+  <h2>Output Images</h2>
+    {% if output_images %}
+      <div class="row">
+	    {% for output_image in output_images %}
+        <div class="col-sm-4">
+	      <img src="media/{{ output_image.img }}" class="img-responsive" style="width: 100%; float: left; margin-right: 10px;" />
+        </div>
+	    {% endfor %}
+      </div>
+    {% else %}
+      <p>No output image found</p>
+    {% endif %}
+{% endblock %}
