@@ -137,7 +137,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
     private void ScanGazeComponent_OnGazeEvent(GazeComponent _component, GazeEvent _event)
     {
-        if (_event == GazeEvent.OnTap && firstTutoDone)
+        if (_event == GazeEvent.OnTap && firstTutoDone && xpActivated)
         {
             for (int i = 0; i < gazeComponents.Count; i++)
             {

@@ -18,6 +18,8 @@ public class ExperienceFlowManager : HoloBehaviour
     private bool firstXP = false;
     private bool xpStarted = false;
     private bool flowStarted = false;
+    private Timer timer;
+    private bool canGesture;
 
     public HoloAudioSource sonDebut;
 
@@ -29,6 +31,10 @@ public class ExperienceFlowManager : HoloBehaviour
         gestureComp.OnPoseStart += OnPoseStarted;
         firstXpBehaviour = (PhotoCaptureBehaviour) firstXpGestureManager.GetBehaviour("PhotoCaptureBehaviour");
         secondXpBehaviour = (HoloRoomChange) secondXpGestureManager.GetBehaviour("HoloRoomChange");
+
+        timer = new Timer(5, () => { canGesture = true; });
+        timer.Start();
+        canGesture = false;
     }
 
 
@@ -48,7 +54,7 @@ public class ExperienceFlowManager : HoloBehaviour
             sonDebut.enabled = true;
             HoloCoroutine.StartCoroutine(firstXpBehaviour.StartAfterIntroCoroutine);
         }
-        if (handPose == HandPose.HandFaceToEachOther && xpStarted)
+        if (handPose == HandPose.HandFaceToEachOther && xpStarted && canGesture)
         {
             if (firstXP)
             {
@@ -63,6 +69,8 @@ public class ExperienceFlowManager : HoloBehaviour
                 Log("Debut de la première experience");
             }
             firstXP = !firstXP;
+            timer.Start();
+            canGesture = false;
         }
     }
 
