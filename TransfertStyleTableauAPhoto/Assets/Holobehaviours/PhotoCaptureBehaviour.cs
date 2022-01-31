@@ -5,26 +5,25 @@ using System.Collections.Generic;
 
 public class PhotoCaptureBehaviour : HoloBehaviour
 {
+    //Composants Holo
     [GestureComponent]
     private GestureComponent gestureComp;
     [GazeComponent]
     public GazeComponent gazeComponent;
-
     [PhotoCaptureComponent]
     public PhotoCaptureComponent photoCaptureComponent;
 
+    //objets référencés
     public HoloGameObject picture;
     public HoloGameObject toile;
     public HoloGameObject toileHolder;
     public List<HoloGameObject> toileHolders;
-    private int currIndexToile = 0;
     public HoloGameObject LabelUI;
     public HoloGameObject Chevalet;
-    private HoloVector3 chevaletInitialScale;
     public HoloGameObject photoViewer;
     public HoloGameObject imagePrefab;
-
-    private bool xpActivated = false;
+    public HoloGameObject firstXpTuto;
+    public HoloGameObject firstXpTuto2;
 
     // Tableaux dans la pièce comportant un box collider
     public HoloGameObject tableau1; private GazeComponent tableau1GazeComponent;
@@ -33,32 +32,33 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     public HoloGameObject tableau4; private GazeComponent tableau4GazeComponent;
     public HoloGameObject tableau5; private GazeComponent tableau5GazeComponent;
 
-    public HoloGameObject firstXpTuto;
-    public HoloGameObject firstXpTuto2;
-
-    private List<GazeComponent> gazeComponents;
-
+    //outils à la gestion du flow
     private Timer timer;
     private bool canGesture = false;     //si les gestes sont reconnus dans le script
     private bool firstTutoDone = false;
     private bool canTakePhoto = false;
     private bool canLaunchEndTuto = false;
     private bool secondTutoDone = false;
+    private bool xpActivated = false;
+    private bool inProgress = false;
 
+
+    private List<GazeComponent> gazeComponents;  
     private List<string> photosPath;     //path des photos prises pour y acceder/les supprimer
     private List<HoloGameObject> photos;    //photos prises et affichees disponibles à la selection
     private List<HoloGameObject> transformedPhotos;     //photos transformees recuperees depuis le serveur
 
 
     private int? chosenPhotoIndex = null;
-    public int maxPhotos = 4;
+    private int? styleIndex = null;
+    public int maxPhotos = 4;    //nombre de photos maximum sauvegardées à la fois sur le casque, à réduire si problèmes de mémoires
     private int _currentPhotoPath = 0;
-    
-    private int? styleIndex; //?? not sure yet if int is the best indicator, mb style name better ?
+    private int currIndexToile = 0;
     private string[] styles = { "mosaic", "rain_princess", "candy", "scream", "udnie"};
+    private HoloVector3 chevaletInitialScale;
 
-    bool inProgress = false;
 
+    //sons
     public HoloAudioSource sonIntro;
     public HoloAudioSource sonPhoto;
     public HoloAudioSource sonTableau;
@@ -141,7 +141,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         {
             for (int i = 0; i < gazeComponents.Count; i++)
             {
-                if (_component == gazeComponents[i])
+                if (_component == gazeComponents[i])   //gestion des événements sur les différents tableaux
                 {
                     styleIndex = i;
 
@@ -170,7 +170,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
     {
         if (xpActivated && canGesture && canTakePhoto)
         {
-            if (handPose == HandPose.HandFaceUser)
+            if (handPose == HandPose.HandFaceUser)    //geste pour la prise de photo
             {
                 if (inProgress)
                 {
@@ -187,7 +187,6 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
     public void LaunchPhotoCapture()
     {
-        //StyleChoice.SetActive(false);
         UpdateLabel("Taking picture, don't move");
         inProgress = true;
         ShowLabelUi();
@@ -204,14 +203,16 @@ public class PhotoCaptureBehaviour : HoloBehaviour
             return;
         }
 
-
+        //modification des chemins des photos enregistrées pour limiter leur nombre et ainsi sauver de la mémoire
         string filename = "Photo_" + _currentPhotoPath + ".png";
         string path = PathHelper.Combine(PathHelper.GetPersistentDataPath(), filename);
-        //Log("path to save = " + path);
+
         photosPath.Add(path);
         chosenPhotoIndex = photosPath.FindIndex(0,(str) => (str==path));
         int tempCurrentPhotoPath = _currentPhotoPath;
         _currentPhotoPath = (_currentPhotoPath + 1) % maxPhotos;
+
+
 
         UpdateLabel("Saving photo");
 
@@ -253,6 +254,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
 
     void SendPhotoToServer(int photoIndex, int styleIndex)
     {
+
         ShowLabelUi();
         inProgress = true;
         int lastSlashIndex = photosPath[photoIndex].LastIndexOf("\\");
@@ -263,7 +265,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         FileHelper.CopyFile(photosPath[photoIndex], tempPath);
 
         // Run command  ServerTF/CameraCaptureServer.py runServer  to start the server
-        string serverOfHostIp = NetworkHelper.GetHoloSceneServerIP();  //192.168.43.186 maxime    192.168.43.112 Quentin     192.168.43.132 Paul  pour les tests en local sur la 4G de Paul
+        string serverOfHostIp = NetworkHelper.GetHoloSceneServerIP();  //192.168.43.186 maxime    192.168.43.112 Quentin     192.168.43.132 Paul  pour les tests en local sur la 4G de Paul    NetworkHelper.GetHoloSceneServerIP() quand PC en facilitator
         string url = "http://" + serverOfHostIp + ":33900/" + styles[styleIndex] + "$" + filename;
 
         Log("Uploading to " + url);
@@ -275,14 +277,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                 Log("Set texture from file " + url);
                 UpdateLabel("Donwloading process photo");
 
-                //HoloGameObject newTransformedPhoto = toileHolder.Duplicate(toile.transform.position,_name: filename + "_" + styles[styleIndex] );
-                //newTransformedPhoto.SetActive(true);
-                //transformedPhotos.Add(newTransformedPhoto);
-
-                //HandlerHelper.SetHandlerEditable(newTransformedPhoto.transform.parent.gameObject, true);
-                //HoloGameObject picture = newTransformedPhoto.FindInHierarchy("ToileSubstitute");
-
-
+                //mise en place du receptacle de la photo prise 
                 toileHolders[currIndexToile].transform.position = Chevalet.transform.position;
                 toileHolders[currIndexToile].transform.rotation = toileHolder.transform.rotation;
                 toileHolders[currIndexToile].transform.localScale *= (Chevalet.transform.localScale.x / chevaletInitialScale.x);
@@ -291,6 +286,7 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                 transformedPhotos.Add(picture);
                 currIndexToile = (currIndexToile + 1) % toileHolders.Count;
 
+                //récupération de la photo transformée
                 picture.GetHoloElementInChildren<HoloRenderer>().material.SetTextureFromUrl(url, (_width, _height) =>
                 {
                     if (_width == 0)
@@ -306,7 +302,6 @@ public class PhotoCaptureBehaviour : HoloBehaviour
                         LabelUI.SetActive(false);
                         sonTransformationImage.enabled = false;
                         sonTransformationImage.enabled = true;
-                        //HoloCoroutine.StartCoroutine(PlayInstructionEndCoroutine);
                     }
                     inProgress = false;
                 });
@@ -399,9 +394,9 @@ public class PhotoCaptureBehaviour : HoloBehaviour
         sonResultat.enabled = true;
     }
 
+    //on gère le flow de façon asynchrone
     public IEnumerator StartAfterIntroCoroutine()
     {
-        //sonIntro.enabled = true;
         yield return HoloCoroutine.WaitForSeconds(9);
         
         firstXpTuto.transform.position = HoloCamera.mainCamera.transform.position + HoloCamera.mainCamera.transform.forward * 1f;

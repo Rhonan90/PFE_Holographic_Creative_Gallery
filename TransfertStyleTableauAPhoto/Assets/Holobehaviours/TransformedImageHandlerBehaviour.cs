@@ -18,7 +18,6 @@ public class TransformedImageHandlerBehaviour : HoloBehaviour
 
     }
 
-
     private void ScanGazeComponent_OnGazeEvent(GazeComponent _component, GazeEvent _event)
     {
         HandlerHelper.SetHandlerEditable(this.gameObject, true);
